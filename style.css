@@ -383,32 +383,7 @@ body {
   background: transparent;
   overflow: hidden;
 }
-.about-bg__item {
-  position: absolute;
-  display: block;
-  max-width: 100%;
-  opacity: 0;
-  will-change: transform;
-  z-index: 0;
-  animation: slideInAbout 0.8s ease-out forwards;
-  -webkit-animation: slideInAbout 0.8s ease-out forwards;
-}
-.about-bg__item--left {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) translateX(-80px);
-  width: clamp(280px, 30vw, 500px);
-  animation-duration: 0.8s;
-  animation-delay: 0.1s;
-}
-.about-bg__item--right {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%) translateX(80px);
-  width: clamp(280px, 30vw, 500px);
-  animation-duration: 0.8s;
-  animation-delay: 0.25s;
-}
+
 @keyframes slideInAbout {
   from {
     opacity: 0;
