@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand d-flex align-items-center" href="#home">
-                <img src="images/logoNebulax.png" alt="NebulaX Logo" class="brand-logo">
+                <img src="images/logo/logo.png" alt="NebulaX Logo" class="brand-logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,15 +36,16 @@
     </nav>
 
     <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-bg__base"></div>
+            <img class="hero-bg__item hero-bg__item--x-right" src="images/bg/x-middle-top-right.png" alt="" aria-hidden="true">
+            <img class="hero-bg__item hero-bg__item--half-circle" src="images/bg/half-circle-top.png" alt="" aria-hidden="true">
+            
+        </div>
         <div class="container hero-content text-center text-lg-start">
-            <h1>We combine creativity, content and technology to transform ideas into immersive experiences.</h1>
+            <h1>We combine creativity,<br>content and technology<br>to transform ideas into<br>immersive experiences.</h1>
             <p>At Nebula X, we believe that every event is a story waiting to be told. From the first concept sketch to the final moment on stage, we shape how audiences see, feel and remember your event.</p>
-            <a href="#about" class="btn btn-primary">Discover More</a>
 
-            <div class="media-block mt-5">
-                <img src="https://images.unsplash.com/photo-1515169067865-5387ec356754?auto=format&fit=crop&w=1600&q=80" alt="Event production stage">
-                <div class="play-button"><i class="fas fa-play"></i></div>
-            </div>
         </div>
     </section>
 
@@ -54,8 +55,6 @@
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <h3>About Us</h3>
                     <h2>We are Nebula Ventures Sdn. Bhd., also known as Nebula X.</h2>
-                </div>
-                <div class="col-lg-6">
                     <p>Nebula Ventures Sdn. Bhd., also known as Nebula X, is a creative content and experience company established in 2025 in Malaysia.</p>
                     <p>At our core, we are a creative content hub which focuses on storytelling, visual impact, and audience engagement. Complementing this is our ability to integrate event technology seamlessly, ensuring that every idea is not only compelling but also executed with precision and scale.</p>
                     <p>In summary, we don't just produce events but we craft experiences that leave lasting impressions.</p>
@@ -71,5 +70,15 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const hero = document.querySelector('.hero');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 32) {
+                hero.classList.add('hero-scroll');
+            } else {
+                hero.classList.remove('hero-scroll');
+            }
+        });
+    </script>
 </body>
 </html>
