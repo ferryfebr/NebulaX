@@ -467,11 +467,11 @@ body {
   background-position:
     right top,
     left 5rem bottom 6rem,
-    left calc(5rem + 56px) bottom 6rem;
+    left calc(5rem + 65px) bottom 6rem;
   background-size:
-    320px auto,
-    60px auto,
-    60px auto;
+    250px auto,
+    70px auto,
+    70px auto;
   background-color: transparent;
 }
 
