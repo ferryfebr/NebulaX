@@ -225,24 +225,29 @@ body {
     position: relative;
 }
 .hero h1 {
-    white-space: pre;
+  white-space: normal;
     width: auto;
-    display: inline-block;
+  display: block;
     overflow-wrap: normal;
     word-break: normal;
-    font-size: clamp(3.3rem, 5vw, 5.6rem);
-    line-height: 0.92;
-    letter-spacing: 0.08em;
+  max-width: min(92vw, 1080px);
+  font-size: clamp(1.9rem, 4.15vw, 3.85rem);
+    line-height: 0.98;
+    letter-spacing: 0.045em;
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 1.5rem;
     color: #ffffff;
 }
+  .hero h1 .hero-line {
+    display: block;
+    white-space: nowrap;
+  }
 .hero p {
     color: rgba(255,255,255,0.92);
-    max-width: 830px;
-    font-size: 1.15rem;
-    line-height: 1.9;
+    max-width: 760px;
+    font-size: 1.08rem;
+    line-height: 1.55;
     margin-bottom: 1.8rem;
 }
 .hero .btn-primary {
@@ -273,10 +278,13 @@ body {
         text-align: center;
     }
     .hero h1 {
-        font-size: clamp(3rem, 8vw, 4.4rem);
+      font-size: clamp(2.05rem, 6.5vw, 3.4rem);
         white-space: normal;
         display: block;
         width: 100%;
+      max-width: 100%;
+      letter-spacing: 0.045em;
+      line-height: 1;
         margin: 0 auto 1rem;
     }
 }
@@ -297,13 +305,17 @@ body {
         padding: 0 1rem;
     }
     .hero h1 {
-        font-size: clamp(1.4rem, 10vw, 2.2rem);
-        letter-spacing: 0.04em;
-        line-height: 1.15;
+      font-size: clamp(1.45rem, 8.8vw, 2.25rem);
+      letter-spacing: 0.03em;
+      line-height: 1.06;
         max-width: 100%;
     }
+    .hero h1 .hero-line {
+        white-space: nowrap;
+    }
     .hero p {
-        font-size: 0.95rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
         max-width: 100%;
     }
     .navbar-custom .navbar-toggler {
@@ -369,7 +381,7 @@ body {
   --bs-gutter-y: 1.5rem;
 }
 .about-title {
-  font-size: clamp(2.31rem, 3.5vw, 3.92rem);
+  font-size: clamp(1.85rem, 2.8vw, 3.14rem);
   line-height: 0.92;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -848,7 +860,7 @@ body {
     padding: 60px 0;
   }
   .about-title {
-    font-size: 2.1rem;
+    font-size: 1.68rem;
   }
   .about-content p {
     font-size: 0.9rem;
@@ -939,7 +951,7 @@ body {
     letter-spacing: 0.05em;
   }
   .about-title {
-    font-size: 1.58rem;
+    font-size: 1.26rem;
     line-height: 0.98;
     letter-spacing: 0.05em;
   }
