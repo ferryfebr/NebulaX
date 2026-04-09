@@ -28,6 +28,10 @@
   --purple-3: #662b9b;
   --light-gray: #f2f2f7;
   --text-white: #f8f8ff;
+  --half-circle-size: 70%;
+  --half-circle-position: -10% 97%;
+  --outline-right-size: 25%;
+  --outline-right-position: 105% 85%;
 }
 * {
   box-sizing: border-box;
@@ -38,7 +42,19 @@ body {
     "Barlow Condensed", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   color: #e8e8f0;
-  background: url("images/bg/bg-purple.png") center/cover no-repeat;
+  background-image:
+    url("images/bg/half-circle-vertical.png"),
+    url("images/bg/x-outline-right.png"),
+    url("images/bg/bg-purple.png");
+  background-position:
+    var(--half-circle-position),
+    var(--outline-right-position),
+    center;
+  background-size:
+    var(--half-circle-size),
+    var(--outline-right-size),
+    cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 }
 .navbar-custom {
   position: fixed;
@@ -381,6 +397,7 @@ body {
   padding: 92px 0 92px;
   background: transparent;
   overflow: hidden;
+  margin-top: 0%
 }
 
 @keyframes slideInAbout {
@@ -398,7 +415,11 @@ body {
     from {
       opacity: 0;
       transform: translateY(-50%) translateX(-80px);
-    }
+      -webkit-transform: translateY(-50%) translateX(-80px);
+      -moz-transform: translateY(-50%) translateX(-80px);
+      -ms-transform: translateY(-50%) translateX(-80px);
+      -o-transform: translateY(-50%) translateX(-80px);
+}
     to {
       opacity: 0.75;
       transform: translateY(-50%) translateX(0);
@@ -427,16 +448,32 @@ body {
     url("images/bg/x-middle-top-right.png"), url("images/bg/bg-purple.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
-    left -20px top -20px,
-    right -20px top -20px,
+    left -20px top -100px,
+    right -20px top -100px,
     center;
   background-size:
-    420px auto,
-    420px auto,
+    400px auto,
+    400px auto,
     cover;
 }
 
-#services.about-section,
+#services.about-section {
+  background-image:
+    url("images/bg/x-pattern-full.png"),
+    url("images/bg/x-pattern-single.png"),
+    url("images/bg/x-pattern-single.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    right top,
+    left 5rem bottom 6rem,
+    left calc(5rem + 65px) bottom 6rem;
+  background-size:
+    250px auto,
+    70px auto,
+    70px auto;
+  background-color: transparent;
+}
+
 #clients.about-section {
   background: transparent;
 }
@@ -479,6 +516,99 @@ body {
 }
 .about-content strong {
   color: #ffffff;
+}
+
+.contact-section {
+  position: relative;
+  padding: 92px 0;
+  background: transparent;
+  overflow: hidden;
+}
+.contact-content {
+  position: relative;
+  z-index: 1;
+}
+.contact-title {
+  font-family: 'HS LunaObscura', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(2.5rem, 4vw, 4.4rem);
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #efe9ff;
+  margin-bottom: 1.6rem;
+}
+.contact-text {
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  max-width: 680px;
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+}
+.contact-details {
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.8;
+}
+.contact-label {
+  display: block;
+  margin-bottom: 0.65rem;
+  color: #d8ccff;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 30px;
+  padding: 2rem 2.2rem;
+  margin-top: -5%;
+  align-self: flex-start;
+  backdrop-filter: blur(18px);
+}
+.contact-card-title {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.contact-card-note {
+  margin: 0 0 1.75rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+}
+.contact-card-arrow {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 1rem;
+}
+.contact-links {
+  display: grid;
+  gap: 1rem;
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.contact-link:hover,
+.contact-link:focus-visible {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+.contact-link i {
+  font-size: 1.4rem;
 }
 
 .projects-showcase {
