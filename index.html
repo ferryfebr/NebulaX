@@ -297,13 +297,13 @@
           <div class="col-lg-6">
             <div class="contact-card">
               <span class="contact-card-title">CONTACT US</span>
-              <p class="contact-card-note">Click here <span class="contact-card-arrow">↓</span></p>
+              <!-- <p class="contact-card-note">Click here <span class="contact-card-arrow">&#8599;</span></p> -->
               <div class="contact-links">
                 <a href="https://wa.me/15553587347" target="_blank" rel="noreferrer" class="contact-link">
                   <i class="fab fa-whatsapp"></i>
                   WhatsApp
                 </a>
-                <a href="mailto:office@en-co.com" class="contact-link">
+                <a href="mailto:viranita2312@gmail.com?subject=Inquiry%20Regarding%20Project%20Administration%20and%20Engineering%20Services&amp;body=Dear%20Firanita%20%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20I%20found%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20quick%20discussion%20about%20my%20needs.%20Thank%20you." class="contact-link">
                   <i class="fas fa-envelope"></i>
                   Gmail
                 </a>
@@ -352,7 +352,7 @@
           <div class="footer-col">
             <h3 class="footer-col-title">Where to find us</h3>
             <p>1888 N Vermont Ave<br>Los Angeles, CA, United States</p>
-            <p>(555)777-4333<br><a href="mailto:hello@web2017.com">hello@web2017.com</a></p>
+            <p>(555)777-4333<br><a href="mailto:viranita2312@gmail.com?subject=Inquiry%20Regarding%20Project%20Administration%20and%20Engineering%20Services&amp;body=Dear%20Firanita%20%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20I%20found%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20quick%20discussion%20about%20my%20needs.%20Thank%20you.">viranita2312@gmail.com</a></p>
           </div>
 
           <div class="footer-col">
@@ -392,6 +392,49 @@
             };
           })
           .filter((item) => item.section);
+
+        const servicesSection = document.querySelector("#services.about-section");
+        const allowServicesParallax =
+          !!servicesSection &&
+          !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let servicesTarget = 0;
+        let servicesCurrent = 0;
+        let servicesRaf = null;
+
+        const applyServicesParallax = () => {
+          servicesRaf = null;
+          if (!allowServicesParallax || !servicesSection) return;
+
+          servicesCurrent += (servicesTarget - servicesCurrent) * 0.12;
+
+          const fullOffset = servicesCurrent * -28;
+          const singleOffset = servicesCurrent * 22;
+
+          servicesSection.style.setProperty(
+            "--services-full-offset",
+            `${fullOffset.toFixed(2)}px`,
+          );
+          servicesSection.style.setProperty(
+            "--services-single-offset",
+            `${singleOffset.toFixed(2)}px`,
+          );
+
+          if (Math.abs(servicesTarget - servicesCurrent) > 0.001) {
+            servicesRaf = window.requestAnimationFrame(applyServicesParallax);
+          }
+        };
+
+        const scheduleServicesParallax = () => {
+          if (!allowServicesParallax || !servicesSection) return;
+          const rect = servicesSection.getBoundingClientRect();
+          const viewportHeight = window.innerHeight || 1;
+          const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+          servicesTarget = Math.max(-1, Math.min(1, centerOffset / viewportHeight));
+
+          if (servicesRaf === null) {
+            servicesRaf = window.requestAnimationFrame(applyServicesParallax);
+          }
+        };
 
         const setActiveNav = (activeLink) => {
           if (!activeLink) return;
@@ -442,6 +485,8 @@
           if (visibleNav) {
             setActiveNav(visibleNav);
           }
+
+          scheduleServicesParallax();
         };
 
         const closeMobileMenu = () => {
@@ -802,6 +847,93 @@
           startAuto();
         }
 
+        const heroSection = document.querySelector("#home.hero");
+        if (heroSection) {
+          const heroLines = Array.from(
+            heroSection.querySelectorAll(".hero-line"),
+          );
+          const hasFinePointer = window.matchMedia(
+            "(hover: hover) and (pointer: fine)",
+          );
+          let pointerX = 0;
+          let pointerY = 0;
+          let rafToken = null;
+
+          const applyHeroParallax = () => {
+            rafToken = null;
+            if (!heroLines.length) return;
+
+            heroLines.forEach((line, index) => {
+              const depth = 0.5 + index * 0.25;
+              const moveX = pointerX * 9 * depth;
+              const moveY = pointerY * 5 * depth;
+              line.style.setProperty("--hero-parallax-x", `${moveX.toFixed(2)}px`);
+              line.style.setProperty("--hero-parallax-y", `${moveY.toFixed(2)}px`);
+            });
+          };
+
+          const scheduleHeroParallax = () => {
+            if (rafToken !== null) return;
+            rafToken = window.requestAnimationFrame(applyHeroParallax);
+          };
+
+          const heroRevealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  heroSection.classList.add("is-visible");
+                }
+              });
+            },
+            {
+              threshold: 0.25,
+            },
+          );
+
+          heroRevealObserver.observe(heroSection);
+
+          if (hasFinePointer.matches) {
+            heroSection.addEventListener("mousemove", (event) => {
+              const rect = heroSection.getBoundingClientRect();
+              const xRatio = (event.clientX - rect.left) / rect.width - 0.5;
+              const yRatio = (event.clientY - rect.top) / rect.height - 0.5;
+              pointerX = Math.max(-1, Math.min(1, xRatio));
+              pointerY = Math.max(-1, Math.min(1, yRatio));
+              scheduleHeroParallax();
+            });
+
+            heroSection.addEventListener("mouseleave", () => {
+              pointerX = 0;
+              pointerY = 0;
+              scheduleHeroParallax();
+            });
+          }
+
+          window.addEventListener("resize", scheduleHeroParallax);
+          scheduleHeroParallax();
+        }
+
+        const aboutRevealSection = document.querySelector("#about.about-section");
+        if (aboutRevealSection) {
+          const revealAboutOnScroll = () => {
+            if (aboutRevealSection.classList.contains("about-is-visible")) return;
+            const rect = aboutRevealSection.getBoundingClientRect();
+            const triggerLine = window.innerHeight * 0.82;
+            if (rect.top <= triggerLine) {
+              aboutRevealSection.classList.add("about-is-visible");
+              window.removeEventListener("scroll", revealAboutOnScroll);
+            }
+          };
+
+          window.addEventListener("scroll", revealAboutOnScroll, {
+            passive: true,
+          });
+          revealAboutOnScroll();
+        }
+
+        window.addEventListener("resize", scheduleServicesParallax);
+        scheduleServicesParallax();
+
         window.addEventListener("hashchange", () => {
           const navByHash = getLinkByHash(navLinks);
           if (navByHash) setActiveNav(navByHash);
@@ -824,6 +956,7 @@
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.add('about-is-visible');
             const leftImg = entry.target.querySelector('.about-bg__item--left');
             const rightImg = entry.target.querySelector('.about-bg__item--right');
             if (leftImg) leftImg.style.animationPlayState = 'running';
