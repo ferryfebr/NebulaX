@@ -78,6 +78,12 @@ body {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   padding: 0.38rem 0;
 }
+
+section[id],
+header[id] {
+  scroll-margin-top: 96px;
+}
+
 .navbar-custom::after {
   content: "";
   position: absolute;
@@ -108,7 +114,7 @@ body {
   font-family: "HS LunaObscura", "Segoe UI", sans-serif;
 }
 .brand-logo {
-  height: 68px;
+  height: 78px;
   width: auto;
   object-fit: contain;
 }
@@ -276,9 +282,10 @@ body {
   max-width: none;
   width: auto;
   margin-top: 10%;
-  padding: 0 4rem;
+  padding: 0 3em;
   z-index: 2;
   position: relative;
+  padding-left: 0;
 }
 .hero h1 {
   white-space: normal;
@@ -286,12 +293,12 @@ body {
   display: block;
   overflow-wrap: normal;
   word-break: normal;
-  max-width: min(92vw, 1080px);
-  font-size: clamp(1.9rem, 4.15vw, 3.85rem);
-  line-height: 0.98;
-  letter-spacing: 0.045em;
+  max-width: min(92vw, 1100px);
+  font-size: clamp(1.9rem, 4.0vw, 3.85rem);
+  line-height: 1.2;
+  letter-spacing: 0.065em;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 400;
   margin-bottom: 1.5rem;
   color: #ffffff;
 }
@@ -314,8 +321,8 @@ body {
 }
 .hero p {
   color: rgba(255, 255, 255, 0.92);
-  max-width: 760px;
-  font-size: 1.08rem;
+  max-width: 600px;
+  font-size: 1.58rem;
   line-height: 1.55;
   margin-bottom: 1.8rem;
   opacity: 0;
@@ -324,6 +331,7 @@ body {
     opacity 0.8s ease,
     transform 0.8s ease;
   will-change: transform, opacity;
+  font-weight: 300;
 }
 
 .hero.is-visible h1 .hero-line {
@@ -508,12 +516,12 @@ body {
     url("images/bg/x-middle-top-right.png"), url("images/bg/bg-purple.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
-    left -20px top -100px,
-    right -20px top -100px,
+    left -20px top -60px,
+    right -20px top -60px,
     center;
   background-size:
-    400px auto,
-    400px auto,
+    500px auto,
+    500px auto,
     cover;
 }
 
@@ -557,19 +565,26 @@ body {
   --bs-gutter-y: 1.5rem;
 }
 .about-title {
-  font-size: clamp(2.09rem, 3.16vw, 3.55rem);
-  line-height: 1.12;
-  letter-spacing: 0.08em;
+  font-size: clamp(3.09rem, 3.16vw, 3.55rem);
+  line-height: 1.2;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #efe9ff;
   margin: 0 0 0.3rem;
-  font-weight: 900;
+  font-weight: 1100;
+}
+/* Style umum tetap ada, tapi kita timpa khusus untuk class ini */
+.industri-title {
+  /* Gunakan clamp yang lebih kecil dari teks sebelumnya */
+  font-size: clamp(2rem, 3vw, 2.8rem); 
+  line-height: 1.2; /* Sesuaikan jarak antar barisnya juga jika perlu */
+  letter-spacing: 0.11em;
 }
 .about-content p {
   color: rgba(255, 255, 255, 0.96);
-  line-height: 1.75;
+  line-height: 1.45;
   margin-bottom: 1.7rem;
-  font-size: clamp(1.06rem, 1.5vw, 1.44rem);
+  font-size: clamp(1.56rem, 1.5vw, 1.44rem);
   letter-spacing: 0.01em;
   max-width: 950px;
 }
@@ -612,6 +627,18 @@ body {
 
 #about.about-section.about-is-visible .col-lg-8 p:nth-child(3) {
   transition-delay: 0.24s;
+}
+
+.scroll-fade {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+
+.scroll-visible .scroll-fade {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 .contact-section {
@@ -657,11 +684,11 @@ body {
 .contact-card {
   background: linear-gradient(
     160deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 255, 255, 0.06) 62%,
-    rgba(255, 255, 255, 0.04) 100%
+    rgba(93, 42, 163, 0.92) 0%,
+    rgba(72, 3, 162, 0.82) 62%,
+    rgba(58, 26, 119, 0.68) 100%
   );
-  border: 1px solid rgba(214, 193, 255, 0.24);
+  border: 1px solid rgba(165, 112, 255, 0.35);
   border-radius: 30px;
   padding: 2rem 2.2rem;
   margin-top: -5%;
@@ -669,7 +696,8 @@ body {
   backdrop-filter: blur(18px);
   box-shadow:
     0 14px 36px rgba(10, 6, 35, 0.34),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
 }
 .contact-card-title {
   display: inline-flex;
@@ -677,13 +705,13 @@ body {
   justify-content: center;
   margin-bottom: 1rem;
   padding: 0.42rem 0.86rem;
-  font-size: 0.84rem;
-  letter-spacing: 0.2em;
-  color: #f7f2ff;
+  font-size: 0.88rem;
+  letter-spacing: 0.18em;
+  color: #fff;
   text-transform: uppercase;
   border-radius: 999px;
-  border: 1px solid rgba(204, 187, 255, 0.4);
-  background: rgba(64, 24, 124, 0.45);
+  border: 1px solid rgba(194, 158, 255, 0.5);
+  background: rgba(115, 58, 203, 0.38);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
 }
 .contact-card-note {
@@ -692,10 +720,11 @@ body {
   gap: 0.45rem;
   margin: 0 0 1.55rem;
   padding: 0;
-  color: rgba(246, 241, 255, 0.92);
+  color: #f5ecff;
   font-size: 0.96rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
 }
 .contact-card-arrow {
   display: inline-flex;
@@ -745,6 +774,7 @@ body {
 .contact-link:focus-visible {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
+  color: rgb(215, 177, 236);
 }
 .contact-link i {
   font-size: 1.4rem;
@@ -811,6 +841,10 @@ body {
     filter 0.8s ease;
 }
 
+.project-card[id] {
+  scroll-margin-top: 100px;
+}
+
 .project-card.is-center {
   transform: scale(1.15);
   opacity: 1;
@@ -857,20 +891,20 @@ body {
 .project-card-title {
   display: block;
   color: #f3f8ff;
-  font-size: clamp(0.76rem, 0.84vw, 0.92rem);
+  font-size: clamp(0.92rem, 1.02vw, 1.1rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  line-height: 1.15;
+  line-height: 1.18;
   margin-bottom: 3px;
 }
 
 .project-card-desc {
   display: block;
   color: rgba(241, 248, 255, 0.95);
-  font-size: clamp(0.58rem, 0.68vw, 0.72rem);
-  line-height: 1.25;
-  font-weight: 500;
+  font-size: clamp(0.7rem, 0.82vw, 0.86rem);
+  line-height: 1.35;
+  font-weight: 550;
   opacity: 0;
   max-height: 0;
   transform: translateY(8px);
@@ -882,7 +916,7 @@ body {
 }
 
 .project-card.is-center:hover .project-card-info {
-  transform: translateY(0);
+  transform: translateY(-3%);
 }
 
 .project-card.is-center:hover .project-card-desc {
@@ -892,7 +926,7 @@ body {
 }
 
 .project-card.is-expanded .project-card-info {
-  transform: translateY(0);
+  transform: translateY(-3%);
 }
 
 .project-card.is-expanded .project-card-desc {
@@ -1188,7 +1222,7 @@ body {
   font-family: "HS LunaObscura", "Segoe UI", sans-serif;
   color: #eee9ff;
   font-size: 0.99rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.09em;
   line-height: 1.3;
 }
@@ -1218,6 +1252,7 @@ body {
 .agency-link:hover,
 .agency-link:focus-visible {
   color: #ffffff;
+  background: rgba(58, 26, 119, 0.35);
   transform: translateY(-1px);
 }
 
@@ -1308,7 +1343,7 @@ body {
     transform: translateY(6px);
   }
   .project-card.is-center:hover .project-card-info {
-    transform: translateY(6%);
+    transform: translateY(3%);
   }
   .project-card.is-center:hover .project-card-desc {
     opacity: 0;
@@ -1316,7 +1351,7 @@ body {
     transform: translateY(6px);
   }
   .project-card.is-expanded .project-card-info {
-    transform: translateY(0);
+    transform: translateY(-3%);
   }
   .project-card.is-expanded .project-card-desc {
     opacity: 1;
@@ -1458,7 +1493,7 @@ body {
     padding: 0.64rem 0;
   }
   .brand-logo {
-    height: 29px;
+    height: 33px;
   }
   .hero {
     min-height: auto;
@@ -1547,13 +1582,13 @@ body {
     padding: 10px 8px;
   }
   .project-card-title {
-    font-size: 0.66rem;
+    font-size: 0.8rem;
     letter-spacing: 0.01em;
     margin-bottom: 1px;
   }
   .project-card-desc {
-    font-size: 0.53rem;
-    line-height: 1.15;
+    font-size: 0.64rem;
+    line-height: 1.2;
   }
   .projects-nav {
     width: 38px;

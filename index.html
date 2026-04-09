@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NebulaX - Creative Event & Experience Agency</title>
+    <link rel="icon" href="images/logo/logo-title.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
@@ -61,8 +62,8 @@
       </video>
     </section>
 
-   <section id="about" class="about-section">
-      <div class="container about-content">
+   <section id="about" class="about-section scroll-section">
+      <div class="container about-content scroll-fade">
         <div class="row align-items-start">
           <div class="col-lg-4 mb-4 mb-lg-0">
             <h2 class="about-title">ABOUT<br />US</h2>
@@ -93,32 +94,32 @@
       <div class="agency-header-inner">
         <!-- Column 1: Creative & Video -->
         <div class="agency-col">
-          <button class="agency-item agency-link" type="button">
+          <a class="agency-item agency-link" href="#projects" data-target="creative-concept-experience-design">
             CREATIVE CONCEPT &amp; EXPERIENCE DESIGN
-          </button>
-          <button class="agency-item agency-link" type="button">
+          </a>
+          <a class="agency-item agency-link" href="#projects" data-target="corporate-video-production">
             CORPORATE VIDEO PRODUCTION
-          </button>
+          </a>
         </div>
         
         <!-- Column 2: Animation & Production -->
         <div class="agency-col">
-          <button class="agency-item agency-link" type="button">
+          <a class="agency-item agency-link" href="#projects" data-target="3d-animation-visual-content">
             3D ANIMATION &amp; VISUAL CONTENT
-          </button>
-          <button class="agency-pill agency-link" type="button">
+          </a>
+          <a class="agency-item agency-link" href="#projects" data-target="event-content-production">
             EVENT CONTENT PRODUCTION
-          </button>
+          </a>
         </div>
         
         <!-- Column 3: Effects & Integration -->
         <div class="agency-col">
-          <button class="agency-item agency-link" type="button">
+          <a class="agency-item agency-link" href="#projects" data-target="launch-gimmicks-special-effects">
             LAUNCH GIMMICKS &amp; SPECIAL EFFECTS
-          </button>
-          <button class="agency-item agency-link" type="button">
+          </a>
+          <a class="agency-item agency-link" href="#projects" data-target="event-technology-integration">
             EVENT TECHNOLOGY INTEGRATION
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -133,78 +134,61 @@
         </button>
 
         <div class="projects-track" id="projectsTrack">
-          <a href="#" class="project-card">
-            <img src="images/IMG1.jpeg" alt="Project 1" />
+          <a class="project-card" data-card-target="creative-concept-experience-design">
+            <img src="images/services/event-content.png" alt="Project 1" />
             <span class="project-card-info">
-              <span class="project-card-title">Corporate Summit</span>
+              <span class="project-card-title">Event Content Production</span>
               <span class="project-card-desc"
                 >Premium stage design and audience experience.</span
               >
             </span>
           </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG2.jpeg" alt="Project 2" />
+          <a class="project-card" data-card-target="3d-animation-visual-content">
+            <img src="images/services/event-technology.png" alt="Project 2" />
             <span class="project-card-info">
-              <span class="project-card-title">Leadership Forum</span>
+              <span class="project-card-title">Event Technology Integration</span>
               <span class="project-card-desc"
                 >High-impact visual storytelling for keynote moments.</span
               >
             </span>
           </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG3.jpeg" alt="Project 3" />
+          <a class="project-card" data-card-target="launch-gimmicks-special-effects">
+            <img src="images/services/creative concept.png" alt="Project 3" />
             <span class="project-card-info">
-              <span class="project-card-title">Innovation Expo</span>
+              <span class="project-card-title">Creative Concept & Experience Design</span>
               <span class="project-card-desc"
                 >Integrated media content for immersive brand launch.</span
               >
             </span>
           </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG4.jpeg" alt="Project 4" />
+          <a class="project-card" data-card-target="corporate-video-production">
+            <img src="images/services/3d-animation.png" alt="Project 4" />
             <span class="project-card-info">
-              <span class="project-card-title">Business Connect</span>
+              <span class="project-card-title">3D Animation & Visual Content</span>
               <span class="project-card-desc"
                 >Executive networking setup with cinematic atmosphere.</span
               >
             </span>
           </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG5.jpg" alt="Project 5" />
+          <a class="project-card" data-card-target="event-content-production">
+            <img src="images/services/launch-gimmick.png" alt="Project 5" />
             <span class="project-card-info">
-              <span class="project-card-title">Award Night</span>
+              <span class="project-card-title">Launch Gimmicks & Special Effects</span>
               <span class="project-card-desc"
                 >Dynamic motion graphics for stage and live screens.</span
               >
             </span>
           </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG6.jpeg" alt="Project 6" />
+          <a class="project-card" data-card-target="event-technology-integration">
+            <img src="images/services/corporate-video.png" alt="Project 6" />
             <span class="project-card-info">
-              <span class="project-card-title">Townhall Event</span>
+              <span class="project-card-title">Corporate Video Production</span>
               <span class="project-card-desc"
                 >Content production that keeps audience fully engaged.</span
               >
             </span>
           </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG7.jpg" alt="Project 7" />
-            <span class="project-card-info">
-              <span class="project-card-title">Product Launch</span>
-              <span class="project-card-desc"
-                >Launch gimmicks and creative reveal sequences.</span
-              >
-            </span>
-          </a>
-          <a href="#" class="project-card">
-            <img src="images/IMG8.jpeg" alt="Project 8" />
-            <span class="project-card-info">
-              <span class="project-card-title">Conference Live</span>
-              <span class="project-card-desc"
-                >End-to-end event technology and show control.</span
-              >
-            </span>
-          </a>
+         
         </div>
 
         <button
@@ -218,8 +202,8 @@
     </section>
     <!-- our service -->
 
-    <section id="services" class="about-section" aria-label="Our service">
-      <div class="container about-content">
+    <section id="services" class="about-section scroll-section" aria-label="Our service">
+      <div class="container about-content scroll-fade">
         <div class="row align-items-start">
           <div class="col-lg-4 mb-4 mb-lg-0">
             <h2 class="about-title">OUR<br />SERVICE</h2>
@@ -248,13 +232,13 @@
 
     <section
       id="clients"
-      class="about-section"
+      class="about-section scroll-section"
       aria-label="Industries we serve"
     >
-      <div class="container about-content">
+      <div class="container about-content scroll-fade">
         <div class="row align-items-start">
           <div class="col-lg-4 mb-4 mb-lg-0">
-            <h2 class="about-title">INDUSTRIES<br>WE SERVE</h2>
+            <h2 class="industri-title">INDUSTRIES<br>WE SERVE</h2>
           </div>
           <div class="col-lg-8">
             <p>
@@ -278,8 +262,8 @@
       </div>
     </section>
 
-    <section id="contact" class="contact-section" aria-label="Contact us">
-      <div class="container contact-content">
+    <section id="contact" class="contact-section scroll-section" aria-label="Contact us">
+      <div class="container contact-content scroll-fade">
         <div class="row align-items-center">
                         <h2 class="contact-title">WE'RE ALWAYS READY <br> TO HELP YOU AND <br> ANSWER YOUR <br> QUESTIONS</h2>
 
@@ -297,7 +281,7 @@
           <div class="col-lg-6">
             <div class="contact-card">
               <span class="contact-card-title">CONTACT US</span>
-              <!-- <p class="contact-card-note">Click here <span class="contact-card-arrow">&#8599;</span></p> -->
+              <p class="contact-card-note">Click here <span class="contact-card-arrow">&#8595;</span></p>
               <div class="contact-links">
                 <a href="https://wa.me/15553587347" target="_blank" rel="noreferrer" class="contact-link">
                   <i class="fab fa-whatsapp"></i>
@@ -648,8 +632,13 @@
           const track = projectsRoot.querySelector("#projectsTrack");
           const prevButton = projectsRoot.querySelector(".projects-prev");
           const nextButton = projectsRoot.querySelector(".projects-next");
-          const sourceCards = Array.from(track?.children || []).map((card) =>
-            card.cloneNode(true),
+          const sourceCards = Array.from(track?.children || []).map((card) => {
+            const clone = card.cloneNode(true);
+            clone.removeAttribute("id");
+            return clone;
+          });
+          const sourceCardTargets = sourceCards.map((card) =>
+            card.dataset.cardTarget || card.querySelector('.project-card-title')?.textContent?.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-'),
           );
           const autoDelay = 5000;
           const transitionDuration = 800;
@@ -759,6 +748,23 @@
             setTrackPosition(false);
           };
 
+          const centerProjectCard = (target) => {
+            const targetIndex = sourceCardTargets.findIndex(
+              (item) => item === target,
+            );
+            if (targetIndex === -1) return;
+            visibleCards = getVisibleCards();
+            currentIndex = visibleCards + targetIndex;
+            setTrackPosition(true);
+            const projectsSection = document.getElementById("projects");
+            if (projectsSection) {
+              projectsSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          };
+
           const moveNext = () => {
             if (!track || isAnimating) return;
             isAnimating = true;
@@ -845,6 +851,14 @@
 
           buildLoop();
           startAuto();
+
+          document.querySelectorAll('.agency-link[data-target]').forEach((link) => {
+            link.addEventListener('click', (event) => {
+              event.preventDefault();
+              const target = link.dataset.target;
+              centerProjectCard(target);
+            });
+          });
         }
 
         const heroSection = document.querySelector("#home.hero");
@@ -947,43 +961,34 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      // Scroll animation for about section background images
-      const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px'
+      const scrollObserverOptions = {
+        threshold: 0.18,
+        rootMargin: '0px 0px -80px 0px'
       };
 
-      const observer = new IntersectionObserver((entries) => {
+      const scrollSectionObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('about-is-visible');
-            const leftImg = entry.target.querySelector('.about-bg__item--left');
-            const rightImg = entry.target.querySelector('.about-bg__item--right');
-            if (leftImg) leftImg.style.animationPlayState = 'running';
-            if (rightImg) rightImg.style.animationPlayState = 'running';
-            observer.unobserve(entry.target);
+            entry.target.classList.add('scroll-visible');
+            scrollSectionObserver.unobserve(entry.target);
           }
         });
-      }, observerOptions);
+      }, scrollObserverOptions);
 
-      const aboutSection = document.querySelector('#about.about-section');
-      if (aboutSection) {
-        observer.observe(aboutSection);
+      document.querySelectorAll('.scroll-section').forEach((section) => {
+        scrollSectionObserver.observe(section);
+      });
+
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 32) {
+            hero.classList.add('hero-scroll');
+          } else {
+            hero.classList.remove('hero-scroll');
+          }
+        });
       }
     </script>
   </body>
-</html>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const hero = document.querySelector('.hero');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 32) {
-                hero.classList.add('hero-scroll');
-            } else {
-                hero.classList.remove('hero-scroll');
-            }
-        });
-    </script>
-</body>
 </html>
