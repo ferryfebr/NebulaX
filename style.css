@@ -367,6 +367,21 @@ body {
   display: none;
 }
 
+#about.about-section {
+  background-image:
+    url("images/bg/x-middle-top-left.png"),
+    url("images/bg/x-middle-top-right.png"), url("images/bg/bg-purple.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position:
+    left -20px top -20px,
+    right -20px top -20px,
+    center;
+  background-size:
+    420px auto,
+    420px auto,
+    cover;
+}
+
 #services.about-section,
 #clients.about-section {
   background: transparent;
@@ -632,11 +647,12 @@ body {
   background: linear-gradient(
     90deg,
     rgba(53, 13, 125, 0) 0%,
-    rgba(75, 25, 170, 0.92) 10%,
-    rgba(94, 74, 199, 0.92) 34%,
-    rgba(99, 118, 213, 0.9) 65%,
-    rgba(112, 152, 228, 0.9) 90%,
-    rgba(78, 117, 206, 0) 100%
+    rgba(75, 25, 170, 0.35) 5%,
+    rgba(94, 74, 199, 0.38) 25%,
+    rgba(99, 118, 213, 0.36) 50%,
+    rgba(94, 74, 199, 0.38) 75%,
+    rgba(75, 25, 170, 0.35) 95%,
+    rgba(53, 13, 125, 0) 100%
   );
   pointer-events: none;
 }
@@ -666,7 +682,7 @@ body {
   margin: 0;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'HS LunaObscura', 'Segoe UI', sans-serif;
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
   color: #eee9ff;
   font-size: 0.99rem;
   font-weight: 700;
@@ -681,7 +697,7 @@ body {
   justify-content: center;
   border: 0;
   background: transparent;
-  font-family: 'HS LunaObscura', 'Segoe UI', sans-serif;
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
   cursor: pointer;
   border-radius: 999px;
   padding: 0.34rem 0.7rem;
@@ -707,7 +723,7 @@ body {
   border-radius: 999px;
   padding: 0.62rem 1.3rem;
   text-transform: uppercase;
-  font-family: 'HS LunaObscura', 'Segoe UI', sans-serif;
+  font-family: "HS LunaObscura", "Segoe UI", sans-serif;
   color: #f7f5ff;
   background: transparent;
   font-size: 1.01rem;
@@ -860,6 +876,16 @@ body {
   .about-section {
     padding: 60px 0;
   }
+  #about.about-section {
+    background-position:
+      left -150px top 20px,
+      right -180px top 20px,
+      center;
+    background-size:
+      340px auto,
+      340px auto,
+      cover;
+  }
   .about-title {
     font-size: 1.9rem;
     line-height: 1.1;
@@ -967,6 +993,16 @@ body {
   }
   .about-section {
     padding: 50px 0;
+  }
+  #about.about-section {
+    background-position:
+      left -165px top 10px,
+      right -200px top 10px,
+      center;
+    background-size:
+      300px auto,
+      300px auto,
+      cover;
   }
   .about-content p {
     font-size: 1.01rem;
