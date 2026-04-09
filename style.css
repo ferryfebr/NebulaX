@@ -359,23 +359,22 @@ body {
 }
 
 .video-section {
-    position: relative;
-    padding: 0;
-    margin: 0;
-    background: #0b0519;
-    overflow: hidden;
-    width: 100%;
-    min-height: 100vh;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: #0b0519;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
 .section-video {
-    width: 100%;
-    height: 100vh;
-    display: block;
-    border-radius: 0;
-    box-shadow: none;
-    object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: cover;
 }
-
 
 .about-section {
   position: relative;
@@ -442,6 +441,10 @@ body {
   background: transparent;
 }
 
+#services.about-section {
+  padding-top: 36px;
+}
+
 #services.about-section::before,
 #clients.about-section::before {
   display: none;
@@ -485,7 +488,7 @@ body {
   width: 100vw;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding: 16px 0 30px;
+  padding: 34px 0 24px;
   background: transparent;
   overflow-x: hidden;
 }
@@ -503,17 +506,18 @@ body {
   position: relative;
   width: 100%;
   max-width: none;
-  padding-inline: clamp(16px, 3vw, 58px);
+  padding-inline: clamp(40px, 6vw, 144px);
   margin-inline: auto;
+  min-height: 0;
   overflow: hidden;
   isolation: isolate;
 }
 
 .projects-track {
   display: flex;
-  gap: 24px;
+  gap: 56px;
   width: max-content;
-  padding: 26px 0 30px;
+  padding: 86px 0 54px;
   margin: 0;
   position: relative;
   z-index: 1;
@@ -522,15 +526,15 @@ body {
 }
 
 .project-card {
-  flex: 0 0 clamp(170px, 18vw, 340px);
-  aspect-ratio: 1 / 1.05;
+  flex: 0 0 clamp(264px, 28vw, 530px);
+  aspect-ratio: 1 / 1.14;
   border-radius: 30px;
   overflow: hidden;
   text-decoration: none;
   position: relative;
   border: 1px solid rgba(184, 210, 255, 0.26);
   box-shadow: 0 16px 34px rgba(2, 5, 25, 0.4);
-  transform: scale(0.92);
+  transform: scale(0.98);
   opacity: 0.9;
   transition:
     transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1),
@@ -539,13 +543,13 @@ body {
 }
 
 .project-card.is-center {
-  transform: scale(1.12);
+  transform: scale(1.15);
   opacity: 1;
   z-index: 2;
 }
 
 .project-card.is-center:hover {
-  transform: scale(1.24);
+  transform: scale(1.2);
 }
 
 .project-card::after {
@@ -671,16 +675,173 @@ body {
 }
 
 .footer {
-  padding: 40px 0;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.65);
+  padding: 60px 0 40px;
+  background: rgba(255, 255, 255, 0.88);
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 88%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  border-top: 1px solid rgba(74, 3, 162, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.75);
 }
-.footer a {
-  color: rgba(255, 255, 255, 0.7);
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col--brand {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  padding-right: 1.4rem;
+}
+
+.footer-logo {
+  max-width: 400px;
+  height: auto;
+}
+
+.footer-desc {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.16rem;
+  line-height: 1.65;
+  margin: 0.5rem 0;
+  max-width: 460px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background: rgba(74, 3, 162, 0.15);
+  color: #4a03a2;
+  border-radius: 50%;
   text-decoration: none;
+  font-size: 1.35rem;
+  transition: all 0.3s ease;
 }
-.footer a:hover {
-  color: #ffffff;
+
+.social-link:hover {
+  background: rgba(74, 3, 162, 0.4);
+  color: #4a03a2;
+  transform: translateY(-2px);
+}
+
+.footer-col-title {
+  color: #4a03a2;
+  font-family: "Barlow Condensed", "Segoe UI", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer-col p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 0.9rem;
+}
+
+.footer-col a {
+  color: rgba(74, 3, 162, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: #2f0f5a;
+}
+
+.footer-bottom {
+  text-align: right;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(74, 3, 162, 0.12);
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 991px) {
+  .footer-top {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .footer-col--brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-logo {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding: 40px 0 30px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-col--brand {
+    grid-column: 1;
+  }
+
+  .footer-logo {
+    max-width: 120px;
+  }
+
+  .footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .social-link {
+    width: 48px;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+
+  .footer-col-title {
+    font-size: 0.88rem;
+  }
+
+  .footer-col p {
+    font-size: 0.85rem;
+  }
 }
 
 /* Agency Header Styles */
@@ -831,6 +992,9 @@ body {
   .about-section {
     padding: 74px 0;
   }
+  #services.about-section {
+    padding-top: 30px;
+  }
   .about-title {
     margin-bottom: 0.35rem;
   }
@@ -845,8 +1009,8 @@ body {
     gap: 18px;
   }
   .project-card {
-    flex-basis: clamp(180px, 29vw, 300px);
-    border-radius: 26px;
+    flex-basis: clamp(216px, 34.8vw, 360px);
+    border-radius: 17px;
   }
   .project-card-info {
     transform: translateY(10%);
@@ -931,6 +1095,9 @@ body {
   .about-section {
     padding: 60px 0;
   }
+  #services.about-section {
+    padding-top: 24px;
+  }
   #about.about-section {
     background-position:
       left -150px top 20px,
@@ -953,21 +1120,24 @@ body {
     --bs-gutter-x: 1.25rem;
   }
   .projects-showcase {
-    padding: 14px 0 24px;
+    padding: 28px 0 22px;
+  }
+  .projects-frame {
+    min-height: 0;
   }
   .projects-track {
-    gap: 14px;
-    padding: 18px 0 22px;
+    gap: 38px;
+    padding: 62px 0 44px;
   }
   .project-card {
-    flex-basis: clamp(190px, 72vw, 270px);
-    border-radius: 22px;
+    flex-basis: clamp(252px, 88vw, 360px);
+    border-radius: 24px;
   }
   .project-card-info {
-    padding: 6px 8px;
+    padding: 8px 10px;
   }
   .project-card-title {
-    font-size: 0.56rem;
+    font-size: 0.68rem;
     letter-spacing: 0.015em;
     margin-bottom: 2px;
     display: -webkit-box;
@@ -977,7 +1147,7 @@ body {
     overflow: hidden;
   }
   .project-card-desc {
-    font-size: 0.46rem;
+    font-size: 0.54rem;
     line-height: 1.2;
     display: -webkit-box;
     line-clamp: 2;
@@ -986,10 +1156,10 @@ body {
     overflow: hidden;
   }
   .project-card.is-center {
-    transform: scale(1.1);
+    transform: scale(1.12);
   }
   .project-card.is-center:hover {
-    transform: scale(1.18);
+    transform: scale(1.16);
   }
   .projects-nav {
     width: 44px;
@@ -1049,6 +1219,9 @@ body {
   .about-section {
     padding: 50px 0;
   }
+  #services.about-section {
+    padding-top: 20px;
+  }
   #about.about-section {
     background-position:
       left -165px top 10px,
@@ -1072,26 +1245,27 @@ body {
     letter-spacing: 0.06em;
   }
   .projects-frame {
-    padding-inline: 10px;
+    padding-inline: 14px;
+    min-height: 0;
   }
   .projects-track {
-    gap: 10px;
-    padding: 14px 0 18px;
+    gap: 22px;
+    padding: 50px 0 36px;
   }
   .project-card {
-    flex-basis: clamp(180px, 82vw, 240px);
-    border-radius: 18px;
+    flex-basis: clamp(232px, 94vw, 316px);
+    border-radius: 20px;
   }
   .project-card-info {
-    padding: 5px 7px;
+    padding: 7px 8px;
   }
   .project-card-title {
-    font-size: 0.5rem;
+    font-size: 0.62rem;
     letter-spacing: 0.01em;
     margin-bottom: 1px;
   }
   .project-card-desc {
-    font-size: 0.42rem;
+    font-size: 0.5rem;
     line-height: 1.15;
   }
   .projects-nav {
