@@ -61,9 +61,7 @@ body {
   }
   to {
     background-position:
-      var(--half-circle-position),
-      var(--outline-right-position),
-      center;
+      var(--half-circle-position), var(--outline-right-position), center;
   }
 }
 .navbar-custom {
@@ -95,10 +93,17 @@ header[id] {
   background: none;
 }
 .navbar-custom .navbar-toggler {
+  padding: 0.4rem 0.52rem;
+  border-width: 1px;
+  border-radius: 10px;
   border-color: rgba(0, 0, 0, 0.12);
 }
 .navbar-custom .navbar-toggler-icon {
-  filter: invert(0.3);
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2874,3,162,0.95%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-size: 100% 100%;
+  filter: none;
 }
 .navbar-brand {
   color: #341a70;
@@ -294,7 +299,7 @@ header[id] {
   overflow-wrap: normal;
   word-break: normal;
   max-width: min(92vw, 1100px);
-  font-size: clamp(1.9rem, 4.0vw, 3.85rem);
+  font-size: clamp(1.9rem, 4vw, 3.85rem);
   line-height: 1.2;
   letter-spacing: 0.065em;
   text-transform: uppercase;
@@ -381,9 +386,29 @@ header[id] {
 }
 
 @media (max-width: 991px) {
+  .contact-content .row {
+    justify-content: center;
+  }
+  .contact-content .contact-card {
+    width: 70%;
+    max-width: 420px;
+    margin: 0.75rem auto 0;
+    padding: 1.45rem 1.55rem;
+  }
   .navbar-nav {
     margin-left: 0;
     justify-content: center;
+  }
+  .navbar-custom .navbar-collapse .navbar-nav {
+    align-items: center !important;
+    gap: 0.5rem;
+  }
+  .navbar-custom .navbar-collapse .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transform: none;
   }
   .hero {
     min-height: auto;
@@ -413,9 +438,13 @@ header[id] {
     padding: 0.75rem 1rem;
   }
   .nav-pill {
-    padding: 0.9rem 1.4rem;
+    padding: 0.86rem 1.35rem;
     min-width: 120px;
     border-radius: 50px;
+  }
+  .navbar-custom .navbar-collapse .nav-link:hover,
+  .navbar-custom .navbar-collapse .nav-link:focus-visible {
+    transform: none;
   }
   .hero {
     padding: 90px 1rem 40px;
@@ -424,13 +453,14 @@ header[id] {
     padding: 0 1rem;
   }
   .hero h1 {
-    font-size: clamp(1.45rem, 8.8vw, 2.25rem);
+    font-size: clamp(1.2rem, 8vw, 2rem);
     letter-spacing: 0.03em;
-    line-height: 1.06;
+    line-height: 1.12;
     max-width: 100%;
   }
   .hero h1 .hero-line {
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
   .hero p {
     font-size: 0.92rem;
@@ -458,6 +488,20 @@ header[id] {
   border-radius: 0;
   box-shadow: none;
   object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .video-section {
+    min-height: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .section-video {
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
 }
 
 .about-section {
@@ -576,7 +620,7 @@ header[id] {
 /* Style umum tetap ada, tapi kita timpa khusus untuk class ini */
 .industri-title {
   /* Gunakan clamp yang lebih kecil dari teks sebelumnya */
-  font-size: clamp(2rem, 3vw, 2.8rem); 
+  font-size: clamp(2rem, 3vw, 2.8rem);
   line-height: 1.2; /* Sesuaikan jarak antar barisnya juga jika perlu */
   letter-spacing: 0.11em;
 }
@@ -632,7 +676,9 @@ header[id] {
 .scroll-fade {
   opacity: 0;
   transform: translate3d(0, 24px, 0);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
   will-change: opacity, transform;
 }
 
@@ -1459,9 +1505,10 @@ header[id] {
     padding: 11px 10px;
   }
   .project-card-title {
-    font-size: 0.74rem;
-    letter-spacing: 0.015em;
+    font-size: clamp(0.6rem, 2.9vw, 0.68rem);
+    letter-spacing: 0.01em;
     margin-bottom: 2px;
+    line-height: 1.16;
     display: -webkit-box;
     line-clamp: 2;
     -webkit-line-clamp: 2;
@@ -1489,6 +1536,11 @@ header[id] {
   }
 }
 @media (max-width: 575px) {
+  .contact-content .contact-card {
+    width: 70%;
+    max-width: 290px;
+    padding: 1.2rem 1rem;
+  }
   .navbar-custom {
     padding: 0.64rem 0;
   }
@@ -1521,9 +1573,25 @@ header[id] {
     font-size: 0.5rem;
   }
   .hero h1 {
-    font-size: 2.25rem;
-    line-height: 0.98;
-    letter-spacing: 0.05em;
+    font-size: clamp(1.05rem, 7.2vw, 1.45rem);
+    line-height: 1.14;
+    letter-spacing: 0.025em;
+  }
+  .project-card-title {
+    font-size: clamp(0.54rem, 3.3vw, 0.62rem);
+    letter-spacing: 0.008em;
+    line-height: 1.14;
+  }
+  .project-card.is-expanded {
+    transform: scale(1.16);
+  }
+  .project-card.is-expanded .project-card-info {
+    transform: translateY(-3%);
+  }
+  .project-card.is-expanded .project-card-desc {
+    opacity: 1;
+    max-height: 72px;
+    transform: translateY(0);
   }
   .about-title {
     font-size: 1.42rem;
