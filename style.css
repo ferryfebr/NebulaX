@@ -1397,11 +1397,11 @@ header[id] {
     transform: translateY(6px);
   }
   .project-card.is-expanded .project-card-info {
-    transform: translateY(-3%);
+    transform: translateY(8%);
   }
   .project-card.is-expanded .project-card-desc {
     opacity: 1;
-    max-height: 72px;
+    max-height: 58px;
     transform: translateY(0);
   }
 }
@@ -1586,11 +1586,11 @@ header[id] {
     transform: scale(1.16);
   }
   .project-card.is-expanded .project-card-info {
-    transform: translateY(-3%);
+    transform: translateY(10%);
   }
   .project-card.is-expanded .project-card-desc {
     opacity: 1;
-    max-height: 72px;
+    max-height: 54px;
     transform: translateY(0);
   }
   .about-title {

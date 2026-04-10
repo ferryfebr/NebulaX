@@ -207,7 +207,7 @@
         <div class="projects-track" id="projectsTrack">
           <a
             class="project-card"
-            data-card-target="creative-concept-experience-design"
+            data-card-target="event-content-production"
           >
             <img src="images/services/event-content.png" alt="Project 1" />
             <span class="project-card-info">
@@ -219,7 +219,7 @@
           </a>
           <a
             class="project-card"
-            data-card-target="3d-animation-visual-content"
+            data-card-target="event-technology-integration"
           >
             <img src="images/services/event-technology.png" alt="Project 2" />
             <span class="project-card-info">
@@ -233,7 +233,7 @@
           </a>
           <a
             class="project-card"
-            data-card-target="launch-gimmicks-special-effects"
+            data-card-target="creative-concept-experience-design"
           >
             <img src="images/services/creative concept.png" alt="Project 3" />
             <span class="project-card-info">
@@ -245,7 +245,7 @@
               >
             </span>
           </a>
-          <a class="project-card" data-card-target="corporate-video-production">
+          <a class="project-card" data-card-target="3d-animation-visual-content">
             <img src="images/services/3d-animation.png" alt="Project 4" />
             <span class="project-card-info">
               <span class="project-card-title"
@@ -256,7 +256,7 @@
               >
             </span>
           </a>
-          <a class="project-card" data-card-target="event-content-production">
+          <a class="project-card" data-card-target="launch-gimmicks-special-effects">
             <img src="images/services/launch-gimmick.png" alt="Project 5" />
             <span class="project-card-info">
               <span class="project-card-title"
@@ -269,7 +269,7 @@
           </a>
           <a
             class="project-card"
-            data-card-target="event-technology-integration"
+            data-card-target="corporate-video-production"
           >
             <img src="images/services/corporate-video.png" alt="Project 6" />
             <span class="project-card-info">
@@ -845,7 +845,12 @@
             });
             const centerIndex = currentIndex + Math.floor(visibleCards / 2);
             const centerCard = cards[centerIndex];
-            if (centerCard) centerCard.classList.add("is-center");
+            if (centerCard) {
+              centerCard.classList.add("is-center");
+              if (isMobileProjectsView()) {
+                centerCard.classList.add("is-expanded");
+              }
+            }
           };
 
           const setTrackPosition = (animate = true) => {
@@ -898,13 +903,26 @@
           };
 
           const centerProjectCard = (target) => {
+            if (!track) return;
             const targetIndex = sourceCardTargets.findIndex(
               (item) => item === target,
             );
             if (targetIndex === -1) return;
+
+            stopAuto();
+            isAnimating = false;
+            expandAfterMove = false;
             visibleCards = getVisibleCards();
-            currentIndex = visibleCards + targetIndex;
-            setTrackPosition(true);
+            const total = sourceCards.length;
+            const centerOffset = Math.floor(visibleCards / 2);
+            const originalTrackIndex = visibleCards + targetIndex;
+            currentIndex = originalTrackIndex - centerOffset;
+
+            const minIndex = visibleCards - centerOffset;
+            const maxIndex = visibleCards + total - 1 - centerOffset;
+            currentIndex = Math.max(minIndex, Math.min(maxIndex, currentIndex));
+
+            setTrackPosition(false);
             const projectsSection = document.getElementById("projects");
             if (projectsSection) {
               projectsSection.scrollIntoView({
@@ -992,7 +1010,7 @@
             if (!centerCard) return;
 
             if (clickedCard === centerCard) {
-              centerCard.classList.toggle("is-expanded");
+              centerCard.classList.add("is-expanded");
               stopAuto();
               return;
             }
