@@ -1155,18 +1155,6 @@
           parallaxRafToken = null;
           const scrollY = window.scrollY;
 
-          // Hero section parallax - background bergerak lebih lambat saat scroll
-          const heroSection = document.querySelector(".hero");
-          if (heroSection) {
-            const heroRect = heroSection.getBoundingClientRect();
-            // Only apply parallax when hero is visible
-            if (heroRect.top < window.innerHeight && heroRect.bottom > 0) {
-              // 0.4x speed untuk smooth depth effect, max 200px
-              const parallaxOffset = Math.max(0, Math.min(scrollY * 0.4, 200));
-              heroSection.style.setProperty("--hero-bg-parallax", `${parallaxOffset}px`);
-            }
-          }
-
           // About section parallax untuk background images x-middle-top-left dan x-middle-top-right
           const aboutSection = document.querySelector("#about.about-section");
           if (aboutSection) {
