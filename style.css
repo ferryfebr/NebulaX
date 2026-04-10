@@ -32,6 +32,8 @@
   --half-circle-position: -10% 82.7%;
   --outline-right-size: 25%;
   --outline-right-position: right -90px top 75%;
+  --parallax-offset-y: 0px;
+  --parallax-bg-offset: 0px;
 }
 * {
   box-sizing: border-box;
@@ -209,13 +211,15 @@ header[id] {
   overflow: hidden;
   background: none;
   padding: 0 0 60px;
+  --hero-bg-parallax: 0px;
 }
 .hero-bg {
   position: absolute;
   inset: 0;
-
   background-size: cover;
   z-index: -1;
+  transform: translateY(var(--hero-bg-parallax));
+  will-change: transform;
 }
 .hero-bg__item {
   position: absolute;
@@ -510,6 +514,8 @@ header[id] {
   background: transparent;
   overflow: hidden;
   margin-top: 0%;
+  --section-parallax-offset: 0px;
+  will-change: background-position;
 }
 
 @keyframes slideInAbout {
@@ -560,8 +566,8 @@ header[id] {
     url("images/bg/x-middle-top-right.png"), url("images/bg/bg-purple.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position:
-    left -20px top -60px,
-    right -20px top -60px,
+    left calc(-20px + var(--section-parallax-offset)) top -60px,
+    right calc(-20px - var(--section-parallax-offset)) top -60px,
     center;
   background-size:
     500px auto,

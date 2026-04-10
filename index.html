@@ -1148,6 +1148,49 @@
         window.addEventListener("resize", scheduleServicesParallax);
         scheduleServicesParallax();
 
+        // Parallax scroll animation untuk hero dan background images
+        let parallaxRafToken = null;
+
+        const applyParallaxScroll = () => {
+          parallaxRafToken = null;
+          const scrollY = window.scrollY;
+
+          // Hero section parallax - background bergerak lebih lambat saat scroll
+          const heroSection = document.querySelector(".hero");
+          if (heroSection) {
+            const heroRect = heroSection.getBoundingClientRect();
+            // Only apply parallax when hero is visible
+            if (heroRect.top < window.innerHeight && heroRect.bottom > 0) {
+              // 0.4x speed untuk smooth depth effect, max 200px
+              const parallaxOffset = Math.max(0, Math.min(scrollY * 0.4, 200));
+              heroSection.style.setProperty("--hero-bg-parallax", `${parallaxOffset}px`);
+            }
+          }
+
+          // About section parallax untuk background images x-middle-top-left dan x-middle-top-right
+          const aboutSection = document.querySelector("#about.about-section");
+          if (aboutSection) {
+            const aboutRect = aboutSection.getBoundingClientRect();
+            // Calculate distance from center of viewport
+            if (aboutRect.top < window.innerHeight && aboutRect.bottom > 0) {
+              const sectionCenter = aboutRect.top + aboutRect.height / 2;
+              const viewportCenter = window.innerHeight / 2;
+              const distanceFromCenter = (sectionCenter - viewportCenter) / window.innerHeight;
+              // ±40px parallax movement untuk subtle effect
+              const parallaxAmount = distanceFromCenter * 40;
+              aboutSection.style.setProperty("--section-parallax-offset", `${parallaxAmount}px`);
+            }
+          }
+        };
+
+        const scheduleParallaxScroll = () => {
+          if (parallaxRafToken === null) {
+            parallaxRafToken = window.requestAnimationFrame(applyParallaxScroll);
+          }
+        };
+
+        window.addEventListener("scroll", scheduleParallaxScroll, { passive: true });
+
         window.addEventListener("hashchange", () => {
           const navByHash = getLinkByHash(navLinks);
           if (navByHash) setActiveNav(navByHash);
