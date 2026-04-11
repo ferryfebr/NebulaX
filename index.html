@@ -1,93 +1,65 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NebulaX - Creative Event & Experience Agency</title>
-    <link rel="icon" href="images/logo/logo-title.png" type="image/png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-      <div class="container d-flex align-items-center justify-content-between">
-        <a class="navbar-brand d-flex align-items-center" href="#home">
-          <img
-            src="images/logo/logo.png"
-            alt="NebulaX Logo"
-            class="brand-logo"
-          />
-        </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NebulaX - Creative Event & Experience Agency</title>
+  <link rel="icon" href="images/logo/logo-title.png" type="image/png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+</head>
 
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item">
-              <a class="nav-link nav-pill active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#clients">Clients</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contacts</a>
-            </li>
-          </ul>
-        </div>
-        <div class="d-none d-lg-flex">
-          <button class="btn btn-search px-4">
-            <i class="fas fa-search me-2"></i>Search
-          </button>
-        </div>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="images/logo/logo.png" alt="NebulaX Logo" class="brand-logo" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item">
+            <a class="nav-link nav-pill active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#clients">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacts</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+      <div class="d-none d-lg-flex">
+        <button class="btn btn-search px-3" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
-    <section id="home" class="hero">
+  <div id="home" class="hero-parallax-wrapper">
+    <section class="hero">
       <div class="hero-bg">
         <div class="hero-bg__base"></div>
-        <img
-          class="hero-bg__item hero-bg__item--x-right"
-          src="images/bg/x-middle-top-right.png"
-          alt=""
-          aria-hidden="true"
-        />
-        <img
-          class="hero-bg__item hero-bg__item--half-circle"
-          src="images/bg/half-circle-top.png"
-          alt=""
-          aria-hidden="true"
-        />
+
       </div>
-      <div class="container hero-content text-center text-lg-start">
+      <div class="container hero-content text-center text-lg-start" data-parallax-speed="0.50">
         <h1>
           <span class="hero-line">We combine creativity,</span>
           <span class="hero-line">content and technology</span>
@@ -108,1087 +80,1084 @@
         Your browser does not support the video tag.
       </video>
     </section>
+  </div>
 
-    <section id="about" class="about-section scroll-section">
-      <div class="container about-content scroll-fade">
-        <div class="row align-items-start">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h2 class="about-title">ABOUT<br />US</h2>
-          </div>
-          <div class="col-lg-8">
-            <p>
-              Nebula Ventures Sdn. Bhd., also known as Nebula X, is a creative
-              content and experience company established in 2025 in Malaysia.
-            </p>
-            <p>
-              At our core, we are a creative content hub which focuses on
-              storytelling, visual impact, and audience engagement.
-              Complementing this is our ability to integrate event technology
-              seamlessly, ensuring that every idea is not only compelling but
-              also executed with precision and scale.
-            </p>
-            <p>
-              In summary, we don't just produce events but we craft experiences
-              that leave lasting impressions.
-            </p>
-          </div>
+  <section id="about" class="about-section scroll-section">
+
+    <div class="container about-content scroll-fade">
+      <div class="row align-items-start">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h2 class="about-title">ABOUT<br />US</h2>
+        </div>
+        <div class="col-lg-8">
+          <p>
+            Nebula Ventures Sdn. Bhd., also known as Nebula X, is a creative
+            content and experience company established in 2025 in Malaysia.
+          </p>
+          <p>
+            At our core, we are a creative content hub which focuses on
+            storytelling, visual impact, and audience engagement.
+            Complementing this is our ability to integrate event technology
+            seamlessly, ensuring that every idea is not only compelling but
+            also executed with precision and scale.
+          </p>
+          <p>
+            In summary, we don't just produce events but we craft experiences
+            that leave lasting impressions.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Agency Services Header -->
-    <section class="agency-header" aria-label="Agency Services Header">
-      <div class="agency-header-inner">
-        <!-- Column 1: Creative & Video -->
-        <div class="agency-col">
-          <a
-            class="agency-item agency-link"
-            href="#projects"
-            data-target="creative-concept-experience-design"
-          >
-            CREATIVE CONCEPT &amp; EXPERIENCE DESIGN
-          </a>
-          <a
-            class="agency-item agency-link"
-            href="#projects"
-            data-target="corporate-video-production"
-          >
-            CORPORATE VIDEO PRODUCTION
-          </a>
+  <!-- Agency Services Header -->
+  <section id="projects" class="agency-header" aria-label="Agency Services Header">
+    <div class="agency-header-inner">
+      <!-- Column 1: Creative & Video -->
+      <div class="agency-col">
+        <a class="agency-item agency-link" href="#projects" data-target="creative-concept-experience-design">
+          CREATIVE CONCEPT &amp; EXPERIENCE DESIGN
+        </a>
+        <a class="agency-item agency-link" href="#projects" data-target="corporate-video-production">
+          CORPORATE VIDEO PRODUCTION
+        </a>
+      </div>
+
+      <!-- Column 2: Animation & Production -->
+      <div class="agency-col">
+        <a class="agency-item agency-link" href="#projects" data-target="3d-animation-visual-content">
+          3D ANIMATION &amp; VISUAL CONTENT
+        </a>
+        <a class="agency-item agency-link" href="#projects" data-target="event-content-production">
+          EVENT CONTENT PRODUCTION
+        </a>
+      </div>
+
+      <!-- Column 3: Effects & Integration -->
+      <div class="agency-col">
+        <a class="agency-item agency-link" href="#projects" data-target="launch-gimmicks-special-effects">
+          LAUNCH GIMMICKS &amp; SPECIAL EFFECTS
+        </a>
+        <a class="agency-item agency-link" href="#projects" data-target="event-technology-integration">
+          EVENT TECHNOLOGY INTEGRATION
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="projects-showcase" class="projects-showcase" aria-label="Our projects">
+    <div class="projects-frame">
+      <button class="projects-nav projects-prev" type="button" aria-label="Project sebelumnya">
+        <span aria-hidden="true">&#10094;</span>
+      </button>
+
+      <div class="projects-track" id="projectsTrack">
+        <a class="project-card" data-card-target="event-content-production">
+          <img src="images/services/event-content.png" alt="Project 1" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Content Production</span>
+            <span class="project-card-desc">Premium stage design and audience experience.</span>
+          </span>
+        </a>
+        <a class="project-card" data-card-target="event-technology-integration">
+          <img src="images/services/event-technology.png" alt="Project 2" />
+          <span class="project-card-info">
+            <span class="project-card-title">Event Technology Integration</span>
+            <span class="project-card-desc">High-impact visual storytelling for keynote moments.</span>
+          </span>
+        </a>
+        <a class="project-card" data-card-target="creative-concept-experience-design">
+          <img src="images/services/creative concept.png" alt="Project 3" />
+          <span class="project-card-info">
+            <span class="project-card-title">Creative Concept & Experience Design</span>
+            <span class="project-card-desc">Integrated media content for immersive brand launch.</span>
+          </span>
+        </a>
+        <a class="project-card" data-card-target="3d-animation-visual-content">
+          <img src="images/services/3d-animation.png" alt="Project 4" />
+          <span class="project-card-info">
+            <span class="project-card-title">3D Animation & Visual Content</span>
+            <span class="project-card-desc">Executive networking setup with cinematic atmosphere.</span>
+          </span>
+        </a>
+        <a class="project-card" data-card-target="launch-gimmicks-special-effects">
+          <img src="images/services/launch-gimmick.png" alt="Project 5" />
+          <span class="project-card-info">
+            <span class="project-card-title">Launch Gimmicks & Special Effects</span>
+            <span class="project-card-desc">Dynamic motion graphics for stage and live screens.</span>
+          </span>
+        </a>
+        <a class="project-card" data-card-target="corporate-video-production">
+          <img src="images/services/corporate-video.png" alt="Project 6" />
+          <span class="project-card-info">
+            <span class="project-card-title">Corporate Video Production</span>
+            <span class="project-card-desc">Content production that keeps audience fully engaged.</span>
+          </span>
+        </a>
+      </div>
+
+      <button class="projects-nav projects-next" type="button" aria-label="Project berikutnya">
+        <span aria-hidden="true">&#10095;</span>
+      </button>
+    </div>
+  </section>
+  <!-- our service -->
+
+  <section id="services" class="about-section scroll-section" aria-label="Our service">
+    <div class="container about-content scroll-fade">
+      <div class="row align-items-start">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h2 class="about-title">OUR<br />SERVICE</h2>
         </div>
-
-        <!-- Column 2: Animation & Production -->
-        <div class="agency-col">
-          <a
-            class="agency-item agency-link"
-            href="#projects"
-            data-target="3d-animation-visual-content"
-          >
-            3D ANIMATION &amp; VISUAL CONTENT
-          </a>
-          <a
-            class="agency-item agency-link"
-            href="#projects"
-            data-target="event-content-production"
-          >
-            EVENT CONTENT PRODUCTION
-          </a>
-        </div>
-
-        <!-- Column 3: Effects & Integration -->
-        <div class="agency-col">
-          <a
-            class="agency-item agency-link"
-            href="#projects"
-            data-target="launch-gimmicks-special-effects"
-          >
-            LAUNCH GIMMICKS &amp; SPECIAL EFFECTS
-          </a>
-          <a
-            class="agency-item agency-link"
-            href="#projects"
-            data-target="event-technology-integration"
-          >
-            EVENT TECHNOLOGY INTEGRATION
-          </a>
+        <div class="col-lg-8">
+          <p>
+            We design and produce end-to-end event experiences, from creative
+            concept to flawless on-site execution.
+          </p>
+          <p>
+            Our core services include creative concept and experience design,
+            corporate video production, 3D animation, visual content, launch
+            gimmicks, and special effects.
+          </p>
+          <p>
+            We also provide event technology integration and content
+            production to deliver immersive events that leave lasting
+            impressions.
+          </p>
         </div>
       </div>
-    </section>
-    <section id="projects" class="projects-showcase" aria-label="Our projects">
-      <div class="projects-frame">
-        <button
-          class="projects-nav projects-prev"
-          type="button"
-          aria-label="Project sebelumnya"
-        >
-          <span aria-hidden="true">&#10094;</span>
-        </button>
+    </div>
+  </section>
 
-        <div class="projects-track" id="projectsTrack">
-          <a
-            class="project-card"
-            data-card-target="event-content-production"
-          >
-            <img src="images/services/event-content.png" alt="Project 1" />
-            <span class="project-card-info">
-              <span class="project-card-title">Event Content Production</span>
-              <span class="project-card-desc"
-                >Premium stage design and audience experience.</span
-              >
-            </span>
-          </a>
-          <a
-            class="project-card"
-            data-card-target="event-technology-integration"
-          >
-            <img src="images/services/event-technology.png" alt="Project 2" />
-            <span class="project-card-info">
-              <span class="project-card-title"
-                >Event Technology Integration</span
-              >
-              <span class="project-card-desc"
-                >High-impact visual storytelling for keynote moments.</span
-              >
-            </span>
-          </a>
-          <a
-            class="project-card"
-            data-card-target="creative-concept-experience-design"
-          >
-            <img src="images/services/creative concept.png" alt="Project 3" />
-            <span class="project-card-info">
-              <span class="project-card-title"
-                >Creative Concept & Experience Design</span
-              >
-              <span class="project-card-desc"
-                >Integrated media content for immersive brand launch.</span
-              >
-            </span>
-          </a>
-          <a class="project-card" data-card-target="3d-animation-visual-content">
-            <img src="images/services/3d-animation.png" alt="Project 4" />
-            <span class="project-card-info">
-              <span class="project-card-title"
-                >3D Animation & Visual Content</span
-              >
-              <span class="project-card-desc"
-                >Executive networking setup with cinematic atmosphere.</span
-              >
-            </span>
-          </a>
-          <a class="project-card" data-card-target="launch-gimmicks-special-effects">
-            <img src="images/services/launch-gimmick.png" alt="Project 5" />
-            <span class="project-card-info">
-              <span class="project-card-title"
-                >Launch Gimmicks & Special Effects</span
-              >
-              <span class="project-card-desc"
-                >Dynamic motion graphics for stage and live screens.</span
-              >
-            </span>
-          </a>
-          <a
-            class="project-card"
-            data-card-target="corporate-video-production"
-          >
-            <img src="images/services/corporate-video.png" alt="Project 6" />
-            <span class="project-card-info">
-              <span class="project-card-title">Corporate Video Production</span>
-              <span class="project-card-desc"
-                >Content production that keeps audience fully engaged.</span
-              >
-            </span>
-          </a>
+  <!-- industries we serve -->
+
+  <section id="clients" class="about-section scroll-section" aria-label="Industries we serve">
+    <div class="container about-content scroll-fade">
+      <div class="row align-items-start">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h2 class="industri-title">INDUSTRIES<br />WE SERVE</h2>
         </div>
-
-        <button
-          class="projects-nav projects-next"
-          type="button"
-          aria-label="Project berikutnya"
-        >
-          <span aria-hidden="true">&#10095;</span>
-        </button>
-      </div>
-    </section>
-    <!-- our service -->
-
-    <section
-      id="services"
-      class="about-section scroll-section"
-      aria-label="Our service"
-    >
-      <div class="container about-content scroll-fade">
-        <div class="row align-items-start">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h2 class="about-title">OUR<br />SERVICE</h2>
-          </div>
-          <div class="col-lg-8">
-            <p>
-              We design and produce end-to-end event experiences, from creative
-              concept to flawless on-site execution.
-            </p>
-            <p>
-              Our core services include creative concept and experience design,
-              corporate video production, 3D animation, visual content, launch
-              gimmicks, and special effects.
-            </p>
-            <p>
-              We also provide event technology integration and content
-              production to deliver immersive events that leave lasting
-              impressions.
-            </p>
-          </div>
+        <div class="col-lg-8">
+          <p>
+            We collaborate with organizations across diverse industries to
+            create event experiences that align with each sector's audience
+            and business goals.
+          </p>
+          <p>
+            Our team frequently supports corporate and finance institutions,
+            government and public agencies, technology and startup brands,
+            education and training institutions, healthcare and wellness
+            organizations, and retail and consumer brands.
+          </p>
+          <p>
+            From internal townhalls to large-scale launches and conferences,
+            we adapt our creative, content, and technical execution to the
+            character of each industry.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- industries we serve -->
+  <section id="contact" class="contact-section scroll-section" aria-label="Contact us">
+    <div class="container contact-content scroll-fade">
+      <div class="row align-items-center">
+        <h2 class="contact-title">
+          WE'RE ALWAYS READY <br />
+          TO HELP YOU AND <br />
+          ANSWER YOUR <br />
+          QUESTIONS
+        </h2>
 
-    <section
-      id="clients"
-      class="about-section scroll-section"
-      aria-label="Industries we serve"
-    >
-      <div class="container about-content scroll-fade">
-        <div class="row align-items-start">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h2 class="industri-title">INDUSTRIES<br />WE SERVE</h2>
-          </div>
-          <div class="col-lg-8">
+        <div class="col-lg-6">
+          <p class="contact-text">
+            We are ready to support your next event, from creative concept to
+            seamless execution. Reach out for fast responses, production
+            guidance, and event technology support.
+          </p>
+          <div class="contact-details">
+            <p class="contact-label">ADDRESS</p>
             <p>
-              We collaborate with organizations across diverse industries to
-              create event experiences that align with each sector's audience
-              and business goals.
+              10800 West Pico Boulevard Infinity Loop<br />Cupertino, Los
+              Angeles, USA
             </p>
-            <p>
-              Our team frequently supports corporate and finance institutions,
-              government and public agencies, technology and startup brands,
-              education and training institutions, healthcare and wellness
-              organizations, and retail and consumer brands.
-            </p>
-            <p>
-              From internal townhalls to large-scale launches and conferences,
-              we adapt our creative, content, and technical execution to the
-              character of each industry.
-            </p>
+            <p class="contact-label">CONTACT</p>
+            <p>office@en-co.com<br />555-3587-347</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section
-      id="contact"
-      class="contact-section scroll-section"
-      aria-label="Contact us"
-    >
-      <div class="container contact-content scroll-fade">
-        <div class="row align-items-center">
-          <h2 class="contact-title">
-            WE'RE ALWAYS READY <br />
-            TO HELP YOU AND <br />
-            ANSWER YOUR <br />
-            QUESTIONS
-          </h2>
-
-          <div class="col-lg-6">
-            <p class="contact-text">
-              We are ready to support your next event, from creative concept to
-              seamless execution. Reach out for fast responses, production
-              guidance, and event technology support.
+        <div class="col-lg-6">
+          <div class="contact-card">
+            <span class="contact-card-title">CONTACT US</span>
+            <p class="contact-card-note">
+              Click here <span class="contact-card-arrow">&#8595;</span>
             </p>
-            <div class="contact-details">
-              <p class="contact-label">ADDRESS</p>
-              <p>
-                10800 West Pico Boulevard Infinity Loop<br />Cupertino, Los
-                Angeles, USA
-              </p>
-              <p class="contact-label">CONTACT</p>
-              <p>office@en-co.com<br />555-3587-347</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="contact-card">
-              <span class="contact-card-title">CONTACT US</span>
-              <p class="contact-card-note">
-                Click here <span class="contact-card-arrow">&#8595;</span>
-              </p>
-              <div class="contact-links">
-                <a
-                  href="https://wa.me/15553587347"
-                  target="_blank"
-                  rel="noreferrer"
-                  class="contact-link"
-                >
-                  <i class="fab fa-whatsapp"></i>
-                  WhatsApp
-                </a>
-                <a
-                  href="mailto:viranita2312@gmail.com?subject=Inquiry%20Regarding%20Project%20Administration%20and%20Engineering%20Services&amp;body=Dear%20Firanita%20%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20I%20found%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20quick%20discussion%20about%20my%20needs.%20Thank%20you."
-                  class="contact-link"
-                >
-                  <i class="fas fa-envelope"></i>
-                  Gmail
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container footer-wrap">
-        <div class="footer-top">
-          <div class="footer-col footer-col--brand">
-            <img
-              src="images/logo/copylogo.png"
-              alt="NebulaX Logo"
-              class="footer-logo"
-            />
-            <p class="footer-desc">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-            <div class="footer-socials">
-              <a href="#" class="social-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
+            <div class="contact-links">
+              <a href="https://wa.me/15553587347" target="_blank" rel="noreferrer" class="contact-link">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
               </a>
-              <a href="#" class="social-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="Threads">
-                <i class="fa-brands fa-threads"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a href="#" class="social-link" aria-label="TikTok">
-                <i class="fab fa-tiktok"></i>
+              <a href="mailto:viranita2312@gmail.com?subject=Inquiry%20Regarding%20Project%20Administration%20and%20Engineering%20Services&amp;body=Dear%20Firanita%20%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20I%20found%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20quick%20discussion%20about%20my%20needs.%20Thank%20you."
+                class="contact-link">
+                <i class="fas fa-envelope"></i>
+                Gmail
               </a>
             </div>
           </div>
-
-          <div class="footer-col">
-            <h3 class="footer-col-title">Interesting Links</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor.
-            </p>
-          </div>
-
-          <div class="footer-col">
-            <h3 class="footer-col-title">More Stuff</h3>
-            <p>
-              Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
-              arcu. In enim justo, rhoncus ut.
-            </p>
-          </div>
-
-          <div class="footer-col">
-            <h3 class="footer-col-title">Where to find us</h3>
-            <p>1888 N Vermont Ave<br />Los Angeles, CA, United States</p>
-            <p>
-              (555)777-4333<br /><a
-                href="mailto:viranita2312@gmail.com?subject=Inquiry%20Regarding%20Project%20Administration%20and%20Engineering%20Services&amp;body=Dear%20Firanita%20%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20I%20found%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20quick%20discussion%20about%20my%20needs.%20Thank%20you."
-                >viranita2312@gmail.com</a
-              >
-            </p>
-          </div>
-
-          <div class="footer-col">
-            <h3 class="footer-col-title">Our Office Hours</h3>
-            <p>Mo-Fr : 08:00-19:00<br />Sa : 08:00-16:00<br />So : closed</p>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026, NEBULA X. All rights reserved.</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const navLinks = Array.from(
-          document.querySelectorAll(".navbar-nav .nav-link"),
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div class="footer-top">
+        <div class="footer-col footer-col--brand">
+          <img src="images/logo/copylogo.png" alt="NebulaX Logo" class="footer-logo" />
+          <p class="footer-desc">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Threads">
+              <i class="fa-brands fa-threads"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Interesting Links</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">More Stuff</h3>
+          <p>
+            Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+            arcu. In enim justo, rhoncus ut.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Where to find us</h3>
+          <p>1888 N Vermont Ave<br />Los Angeles, CA, United States</p>
+          <p>
+            (555)777-4333<br /><a
+              href="mailto:viranita2312@gmail.com?subject=Inquiry%20Regarding%20Project%20Administration%20and%20Engineering%20Services&amp;body=Dear%20Firanita%20%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project.%20I%20found%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20quick%20discussion%20about%20my%20needs.%20Thank%20you.">viranita2312@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Our Office Hours</h3>
+          <p>Mo-Fr : 08:00-19:00<br />Sa : 08:00-16:00<br />So : closed</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026, NEBULA X. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navLinks = Array.from(
+        document.querySelectorAll(".navbar-nav .nav-link"),
+      );
+      const agencyButtons = Array.from(
+        document.querySelectorAll(".agency-header .agency-link"),
+      );
+      const navCollapse = document.getElementById("navbarNav");
+
+      if (!navLinks.length) return;
+
+      const navSectionMap = navLinks
+        .map((link) => {
+          const href = link.getAttribute("href");
+          return {
+            link,
+            href,
+            section:
+              href && href.startsWith("#")
+                ? document.querySelector(href)
+                : null,
+          };
+        })
+        .filter((item) => item.section);
+
+      const servicesSection = document.querySelector(
+        "#services.about-section",
+      );
+      const allowServicesParallax =
+        !!servicesSection &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let servicesTarget = 0;
+      let servicesCurrent = 0;
+      let servicesRaf = null;
+
+      const applyServicesParallax = () => {
+        servicesRaf = null;
+        if (!allowServicesParallax || !servicesSection) return;
+
+        servicesCurrent += (servicesTarget - servicesCurrent) * 0.12;
+
+        const fullOffset = servicesCurrent * -28;
+        const singleOffset = servicesCurrent * 22;
+
+        servicesSection.style.setProperty(
+          "--services-full-offset",
+          `${fullOffset.toFixed(2)}px`,
         );
-        const agencyButtons = Array.from(
-          document.querySelectorAll(".agency-header .agency-link"),
+        servicesSection.style.setProperty(
+          "--services-single-offset",
+          `${singleOffset.toFixed(2)}px`,
         );
-        const navCollapse = document.getElementById("navbarNav");
 
-        if (!navLinks.length) return;
-
-        const navSectionMap = navLinks
-          .map((link) => {
-            const href = link.getAttribute("href");
-            return {
-              link,
-              href,
-              section:
-                href && href.startsWith("#")
-                  ? document.querySelector(href)
-                  : null,
-            };
-          })
-          .filter((item) => item.section);
-
-        const servicesSection = document.querySelector(
-          "#services.about-section",
-        );
-        const allowServicesParallax =
-          !!servicesSection &&
-          !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        let servicesTarget = 0;
-        let servicesCurrent = 0;
-        let servicesRaf = null;
-
-        const applyServicesParallax = () => {
-          servicesRaf = null;
-          if (!allowServicesParallax || !servicesSection) return;
-
-          servicesCurrent += (servicesTarget - servicesCurrent) * 0.12;
-
-          const fullOffset = servicesCurrent * -28;
-          const singleOffset = servicesCurrent * 22;
-
-          servicesSection.style.setProperty(
-            "--services-full-offset",
-            `${fullOffset.toFixed(2)}px`,
-          );
-          servicesSection.style.setProperty(
-            "--services-single-offset",
-            `${singleOffset.toFixed(2)}px`,
-          );
-
-          if (Math.abs(servicesTarget - servicesCurrent) > 0.001) {
-            servicesRaf = window.requestAnimationFrame(applyServicesParallax);
-          }
-        };
-
-        const scheduleServicesParallax = () => {
-          if (!allowServicesParallax || !servicesSection) return;
-          const rect = servicesSection.getBoundingClientRect();
-          const viewportHeight = window.innerHeight || 1;
-          const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
-          servicesTarget = Math.max(
-            -1,
-            Math.min(1, centerOffset / viewportHeight),
-          );
-
-          if (servicesRaf === null) {
-            servicesRaf = window.requestAnimationFrame(applyServicesParallax);
-          }
-        };
-
-        const setActiveNav = (activeLink) => {
-          if (!activeLink) return;
-          navLinks.forEach((link) => {
-            link.classList.remove("nav-pill", "active");
-            link.removeAttribute("aria-current");
-          });
-          activeLink.classList.add("nav-pill", "active");
-          activeLink.setAttribute("aria-current", "page");
-        };
-
-        const setActiveAgency = (activeButton) => {
-          if (!agencyButtons.length || !activeButton) return;
-          agencyButtons.forEach((button) => {
-            button.classList.remove("agency-active");
-            button.setAttribute("aria-pressed", "false");
-          });
-          activeButton.classList.add("agency-active");
-          activeButton.setAttribute("aria-pressed", "true");
-        };
-
-        const getLinkByHash = (links) => {
-          const currentHash = window.location.hash;
-          return links.find(
-            (link) => link.getAttribute("href") === currentHash,
-          );
-        };
-
-        const getVisibleSectionNavLink = () => {
-          const threshold = window.scrollY + 140;
-          let current = null;
-
-          navSectionMap.forEach((item) => {
-            if (item.section.offsetTop <= threshold) {
-              current = item.link;
-            }
-          });
-
-          return current;
-        };
-
-        const syncActiveByScroll = () => {
-          const hash = window.location.hash;
-          const hashTargetExists = hash ? !!document.querySelector(hash) : true;
-          if (!hashTargetExists) return;
-
-          const visibleNav = getVisibleSectionNavLink();
-          if (visibleNav) {
-            setActiveNav(visibleNav);
-          }
-
-          scheduleServicesParallax();
-        };
-
-        const closeMobileMenu = () => {
-          if (!navCollapse || !navCollapse.classList.contains("show")) return;
-          navCollapse.classList.remove("show");
-          const toggler = document.querySelector(
-            '.navbar-toggler[data-bs-target="#navbarNav"]',
-          );
-          if (toggler) toggler.setAttribute("aria-expanded", "false");
-        };
-
-        const initialNav =
-          getLinkByHash(navLinks) ||
-          navLinks.find((link) => link.classList.contains("nav-pill")) ||
-          navLinks[0];
-        setActiveNav(initialNav);
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", () => {
-            setActiveNav(link);
-            closeMobileMenu();
-          });
-        });
-
-        if (agencyButtons.length) {
-          const initialAgencyButton = agencyButtons.find((button) =>
-            button.classList.contains("agency-active"),
-          );
-
-          agencyButtons.forEach((button) => {
-            button.setAttribute("aria-pressed", "false");
-            button.addEventListener("click", () => {
-              setActiveAgency(button);
-            });
-          });
-
-          if (initialAgencyButton) {
-            setActiveAgency(initialAgencyButton);
-          }
+        if (Math.abs(servicesTarget - servicesCurrent) > 0.001) {
+          servicesRaf = window.requestAnimationFrame(applyServicesParallax);
         }
-
-        const carouselRoot = document.querySelector(".services-carousel");
-        if (carouselRoot) {
-          const viewport = carouselRoot.querySelector(".carousel-viewport");
-          const track = carouselRoot.querySelector(".carousel-track");
-          const prevButton = carouselRoot.querySelector(
-            ".carousel-control-prev",
-          );
-          const nextButton = carouselRoot.querySelector(
-            ".carousel-control-next",
-          );
-          const originalCards = Array.from(track.children).map((card) =>
-            card.cloneNode(true),
-          );
-          const autoDelay = 4000;
-          let cardsPerView = 5;
-          let currentIndex = 0;
-          let autoTimer = null;
-
-          const getCardsPerView = () =>
-            Number.parseInt(
-              getComputedStyle(carouselRoot).getPropertyValue(
-                "--cards-per-view",
-              ),
-              10,
-            ) || 5;
-
-          const getStepSize = () => {
-            const firstCard = track.children[0];
-            if (!firstCard) return 0;
-            const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-            return firstCard.getBoundingClientRect().width + gap;
-          };
-
-          const setTrackPosition = (animate = true) => {
-            const step = getStepSize();
-            track.style.transition = animate ? "transform 0.55s ease" : "none";
-            track.style.transform = `translateX(-${step * currentIndex}px)`;
-          };
-
-          const buildLoop = () => {
-            cardsPerView = getCardsPerView();
-            track.innerHTML = "";
-
-            const headClones = originalCards
-              .slice(-cardsPerView)
-              .map((card) => card.cloneNode(true));
-            const tailClones = originalCards
-              .slice(0, cardsPerView)
-              .map((card) => card.cloneNode(true));
-            [
-              ...headClones,
-              ...originalCards.map((card) => card.cloneNode(true)),
-              ...tailClones,
-            ].forEach((card) => {
-              track.appendChild(card);
-            });
-
-            currentIndex = cardsPerView;
-            setTrackPosition(false);
-          };
-
-          const moveNext = () => {
-            currentIndex += 1;
-            setTrackPosition(true);
-          };
-
-          const movePrev = () => {
-            currentIndex -= 1;
-            setTrackPosition(true);
-          };
-
-          const startAuto = () => {
-            if (autoTimer) clearInterval(autoTimer);
-            autoTimer = setInterval(moveNext, autoDelay);
-          };
-
-          const restartAuto = () => {
-            startAuto();
-          };
-
-          track.addEventListener("transitionend", () => {
-            const totalOriginal = originalCards.length;
-            if (currentIndex >= totalOriginal + cardsPerView) {
-              currentIndex = cardsPerView;
-              setTrackPosition(false);
-            }
-            if (currentIndex < cardsPerView) {
-              currentIndex = totalOriginal + cardsPerView - 1;
-              setTrackPosition(false);
-            }
-          });
-
-          nextButton?.addEventListener("click", () => {
-            moveNext();
-            restartAuto();
-          });
-
-          prevButton?.addEventListener("click", () => {
-            movePrev();
-            restartAuto();
-          });
-
-          let resizeTimer = null;
-          window.addEventListener("resize", () => {
-            if (resizeTimer) clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-              buildLoop();
-            }, 120);
-          });
-
-          buildLoop();
-          startAuto();
-        }
-
-        const projectsRoot = document.querySelector(".projects-showcase");
-        if (projectsRoot) {
-          const frame = projectsRoot.querySelector(".projects-frame");
-          const track = projectsRoot.querySelector("#projectsTrack");
-          const prevButton = projectsRoot.querySelector(".projects-prev");
-          const nextButton = projectsRoot.querySelector(".projects-next");
-          const sourceCards = Array.from(track?.children || []).map((card) => {
-            const clone = card.cloneNode(true);
-            clone.removeAttribute("id");
-            return clone;
-          });
-          const sourceCardTargets = sourceCards.map(
-            (card) =>
-              card.dataset.cardTarget ||
-              card
-                .querySelector(".project-card-title")
-                ?.textContent?.trim()
-                .toLowerCase()
-                .replace(/[^a-z0-9]+/g, "-"),
-          );
-          const autoDelay = 5000;
-          const transitionDuration = 800;
-          let visibleCards = 5;
-          let currentIndex = 0;
-          let autoTimer = null;
-          let resizeTimer = null;
-          let isAnimating = false;
-          let expandAfterMove = false;
-
-          const isMobileProjectsView = () =>
-            window.matchMedia("(max-width: 991.98px)").matches;
-
-          const getVisibleCards = () => {
-            if (window.innerWidth <= 991) return 3;
-            return 5;
-          };
-
-          const getCardSizeMultiplier = () => {
-            if (window.innerWidth <= 991) return 1;
-            return 1.45;
-          };
-
-          const getStepSize = () => {
-            const firstCard = track?.children[0];
-            if (!firstCard) return 0;
-            const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-            return firstCard.offsetWidth + gap;
-          };
-
-          const applyCardSizes = () => {
-            if (!track || !frame) return;
-            const frameStyles = getComputedStyle(frame);
-            const framePaddingLeft =
-              Number.parseFloat(frameStyles.paddingLeft) || 0;
-            const framePaddingRight =
-              Number.parseFloat(frameStyles.paddingRight) || 0;
-            const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-            const frameWidth = frame.getBoundingClientRect().width;
-            const contentWidth =
-              frameWidth - framePaddingLeft - framePaddingRight;
-            const baseCardWidth =
-              (contentWidth - gap * (visibleCards - 1)) / visibleCards;
-            const cardWidth = baseCardWidth * getCardSizeMultiplier();
-
-            Array.from(track.children).forEach((card) => {
-              card.style.flexBasis = `${Math.max(cardWidth, 120)}px`;
-            });
-          };
-
-          const updateCenterCard = () => {
-            if (!track) return;
-            const cards = Array.from(track.children);
-            cards.forEach((card) => {
-              card.classList.remove("is-center", "is-expanded");
-            });
-            const centerIndex = currentIndex + Math.floor(visibleCards / 2);
-            const centerCard = cards[centerIndex];
-            if (centerCard) {
-              centerCard.classList.add("is-center");
-              if (isMobileProjectsView()) {
-                centerCard.classList.add("is-expanded");
-              }
-            }
-          };
-
-          const setTrackPosition = (animate = true) => {
-            if (!track) return;
-            const firstCard = track.children[0];
-            if (!firstCard) return;
-            const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
-            const cardWidth = firstCard.offsetWidth;
-            const step = cardWidth + gap;
-            const frameRect = frame?.getBoundingClientRect();
-            const frameStyles = frame ? getComputedStyle(frame) : null;
-            const framePaddingLeft = frameStyles
-              ? Number.parseFloat(frameStyles.paddingLeft) || 0
-              : 0;
-            const centerIndex = currentIndex + Math.floor(visibleCards / 2);
-            const sectionRect = projectsRoot.getBoundingClientRect();
-            const sectionCenterX = sectionRect.left + sectionRect.width / 2;
-            const trackStartX = (frameRect?.left || 0) + framePaddingLeft;
-            const centeredX =
-              sectionCenterX -
-              (trackStartX + centerIndex * step + cardWidth / 2);
-
-            track.style.transition = animate
-              ? `transform ${transitionDuration}ms cubic-bezier(0.22, 0.61, 0.36, 1)`
-              : "none";
-            track.style.transform = `translate3d(${centeredX}px, 0, 0)`;
-            updateCenterCard();
-          };
-
-          const buildLoop = () => {
-            if (!track || !sourceCards.length) return;
-            visibleCards = getVisibleCards();
-            track.innerHTML = "";
-
-            const headClones = sourceCards
-              .slice(-visibleCards)
-              .map((card) => card.cloneNode(true));
-            const tailClones = sourceCards
-              .slice(0, visibleCards)
-              .map((card) => card.cloneNode(true));
-
-            [...headClones, ...sourceCards, ...tailClones].forEach((card) => {
-              track.appendChild(card);
-            });
-
-            applyCardSizes();
-
-            currentIndex = visibleCards;
-            setTrackPosition(false);
-          };
-
-          const centerProjectCard = (target) => {
-            if (!track) return;
-            const targetIndex = sourceCardTargets.findIndex(
-              (item) => item === target,
-            );
-            if (targetIndex === -1) return;
-
-            stopAuto();
-            isAnimating = false;
-            expandAfterMove = false;
-            visibleCards = getVisibleCards();
-            const total = sourceCards.length;
-            const centerOffset = Math.floor(visibleCards / 2);
-            const originalTrackIndex = visibleCards + targetIndex;
-            currentIndex = originalTrackIndex - centerOffset;
-
-            const minIndex = visibleCards - centerOffset;
-            const maxIndex = visibleCards + total - 1 - centerOffset;
-            currentIndex = Math.max(minIndex, Math.min(maxIndex, currentIndex));
-
-            setTrackPosition(false);
-            const projectsSection = document.getElementById("projects");
-            if (projectsSection) {
-              projectsSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          };
-
-          const moveNext = () => {
-            if (!track || isAnimating) return;
-            isAnimating = true;
-            currentIndex += 1;
-            setTrackPosition(true);
-          };
-
-          const movePrev = () => {
-            if (!track || isAnimating) return;
-            isAnimating = true;
-            currentIndex -= 1;
-            setTrackPosition(true);
-          };
-
-          const startAuto = () => {
-            if (autoTimer) clearInterval(autoTimer);
-            autoTimer = setInterval(() => {
-              moveNext();
-            }, autoDelay);
-          };
-
-          const stopAuto = () => {
-            if (!autoTimer) return;
-            clearInterval(autoTimer);
-            autoTimer = null;
-          };
-
-          const restartAuto = () => {
-            stopAuto();
-            startAuto();
-          };
-
-          track?.addEventListener("transitionend", () => {
-            const total = sourceCards.length;
-
-            if (currentIndex >= total + visibleCards) {
-              currentIndex = visibleCards;
-              setTrackPosition(false);
-            }
-
-            if (currentIndex < visibleCards) {
-              currentIndex = total + visibleCards - 1;
-              setTrackPosition(false);
-            }
-
-            isAnimating = false;
-            updateCenterCard();
-
-            if (expandAfterMove) {
-              const centeredCard = track.querySelector(
-                ".project-card.is-center",
-              );
-              centeredCard?.classList.add("is-expanded");
-              expandAfterMove = false;
-            }
-          });
-
-          nextButton?.addEventListener("click", () => {
-            moveNext();
-            restartAuto();
-          });
-
-          prevButton?.addEventListener("click", () => {
-            movePrev();
-            restartAuto();
-          });
-
-          track?.addEventListener("click", (event) => {
-            if (!isMobileProjectsView()) return;
-
-            const clickedCard = event.target.closest(".project-card");
-            if (!clickedCard || !track.contains(clickedCard)) return;
-
-            event.preventDefault();
-            const centerCard = track.querySelector(".project-card.is-center");
-            if (!centerCard) return;
-
-            if (clickedCard === centerCard) {
-              centerCard.classList.add("is-expanded");
-              stopAuto();
-              return;
-            }
-
-            const cards = Array.from(track.children);
-            const clickedIndex = cards.indexOf(clickedCard);
-            if (clickedIndex === -1) return;
-
-            const centerOffset = Math.floor(visibleCards / 2);
-            currentIndex = clickedIndex - centerOffset;
-            expandAfterMove = true;
-            isAnimating = true;
-            setTrackPosition(true);
-            stopAuto();
-          });
-
-          frame?.addEventListener("mouseenter", stopAuto);
-          frame?.addEventListener("mouseleave", startAuto);
-
-          window.addEventListener("resize", () => {
-            if (resizeTimer) clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-              isAnimating = false;
-              buildLoop();
-            }, 120);
-          });
-
-          buildLoop();
-          startAuto();
-
-          document
-            .querySelectorAll(".agency-link[data-target]")
-            .forEach((link) => {
-              link.addEventListener("click", (event) => {
-                event.preventDefault();
-                const target = link.dataset.target;
-                centerProjectCard(target);
-              });
-            });
-        }
-
-        const heroSection = document.querySelector("#home.hero");
-        if (heroSection) {
-          const heroLines = Array.from(
-            heroSection.querySelectorAll(".hero-line"),
-          );
-          const hasFinePointer = window.matchMedia(
-            "(hover: hover) and (pointer: fine)",
-          );
-          let pointerX = 0;
-          let pointerY = 0;
-          let rafToken = null;
-
-          const applyHeroParallax = () => {
-            rafToken = null;
-            if (!heroLines.length) return;
-
-            heroLines.forEach((line, index) => {
-              const depth = 0.5 + index * 0.25;
-              const moveX = pointerX * 9 * depth;
-              const moveY = pointerY * 5 * depth;
-              line.style.setProperty(
-                "--hero-parallax-x",
-                `${moveX.toFixed(2)}px`,
-              );
-              line.style.setProperty(
-                "--hero-parallax-y",
-                `${moveY.toFixed(2)}px`,
-              );
-            });
-          };
-
-          const scheduleHeroParallax = () => {
-            if (rafToken !== null) return;
-            rafToken = window.requestAnimationFrame(applyHeroParallax);
-          };
-
-          const heroRevealObserver = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  heroSection.classList.add("is-visible");
-                }
-              });
-            },
-            {
-              threshold: 0.25,
-            },
-          );
-
-          heroRevealObserver.observe(heroSection);
-
-          if (hasFinePointer.matches) {
-            heroSection.addEventListener("mousemove", (event) => {
-              const rect = heroSection.getBoundingClientRect();
-              const xRatio = (event.clientX - rect.left) / rect.width - 0.5;
-              const yRatio = (event.clientY - rect.top) / rect.height - 0.5;
-              pointerX = Math.max(-1, Math.min(1, xRatio));
-              pointerY = Math.max(-1, Math.min(1, yRatio));
-              scheduleHeroParallax();
-            });
-
-            heroSection.addEventListener("mouseleave", () => {
-              pointerX = 0;
-              pointerY = 0;
-              scheduleHeroParallax();
-            });
-          }
-
-          window.addEventListener("resize", scheduleHeroParallax);
-          scheduleHeroParallax();
-        }
-
-        const aboutRevealSection = document.querySelector(
-          "#about.about-section",
-        );
-        if (aboutRevealSection) {
-          const revealAboutOnScroll = () => {
-            if (aboutRevealSection.classList.contains("about-is-visible"))
-              return;
-            const rect = aboutRevealSection.getBoundingClientRect();
-            const triggerLine = window.innerHeight * 0.82;
-            if (rect.top <= triggerLine) {
-              aboutRevealSection.classList.add("about-is-visible");
-              window.removeEventListener("scroll", revealAboutOnScroll);
-            }
-          };
-
-          window.addEventListener("scroll", revealAboutOnScroll, {
-            passive: true,
-          });
-          revealAboutOnScroll();
-        }
-
-        window.addEventListener("resize", scheduleServicesParallax);
-        scheduleServicesParallax();
-
-        window.addEventListener("hashchange", () => {
-          const navByHash = getLinkByHash(navLinks);
-          if (navByHash) setActiveNav(navByHash);
-        });
-
-        window.addEventListener("scroll", syncActiveByScroll, {
-          passive: true,
-        });
-        syncActiveByScroll();
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      const scrollObserverOptions = {
-        threshold: 0.18,
-        rootMargin: "0px 0px -80px 0px",
       };
 
-      const scrollSectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("scroll-visible");
-            scrollSectionObserver.unobserve(entry.target);
+      const scheduleServicesParallax = () => {
+        if (!allowServicesParallax || !servicesSection) return;
+        const rect = servicesSection.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || 1;
+        const centerOffset = rect.top + rect.height / 2 - viewportHeight / 2;
+        servicesTarget = Math.max(
+          -1,
+          Math.min(1, centerOffset / viewportHeight),
+        );
+
+        if (servicesRaf === null) {
+          servicesRaf = window.requestAnimationFrame(applyServicesParallax);
+        }
+      };
+
+      const setActiveNav = (activeLink) => {
+        if (!activeLink) return;
+        navLinks.forEach((link) => {
+          link.classList.remove("nav-pill", "active");
+          link.removeAttribute("aria-current");
+        });
+        activeLink.classList.add("nav-pill", "active");
+        activeLink.setAttribute("aria-current", "page");
+      };
+
+      const setActiveAgency = (activeButton) => {
+        if (!agencyButtons.length || !activeButton) return;
+        agencyButtons.forEach((button) => {
+          button.classList.remove("agency-active");
+          button.setAttribute("aria-pressed", "false");
+        });
+        activeButton.classList.add("agency-active");
+        activeButton.setAttribute("aria-pressed", "true");
+      };
+
+      const getLinkByHash = (links) => {
+        const currentHash = window.location.hash;
+        return links.find(
+          (link) => link.getAttribute("href") === currentHash,
+        );
+      };
+
+      const getVisibleSectionNavLink = () => {
+        const threshold = window.scrollY + 140;
+        let current = null;
+
+        navSectionMap.forEach((item) => {
+          if (item.section.offsetTop <= threshold) {
+            current = item.link;
           }
         });
-      }, scrollObserverOptions);
 
-      document.querySelectorAll(".scroll-section").forEach((section) => {
-        scrollSectionObserver.observe(section);
+        return current;
+      };
+
+      const syncActiveByScroll = () => {
+        const hash = window.location.hash;
+        const hashTargetExists = hash ? !!document.querySelector(hash) : true;
+        if (!hashTargetExists) return;
+
+        const visibleNav = getVisibleSectionNavLink();
+        if (visibleNav) {
+          setActiveNav(visibleNav);
+        }
+
+        scheduleServicesParallax();
+      };
+
+      const closeMobileMenu = () => {
+        if (!navCollapse || !navCollapse.classList.contains("show")) return;
+        navCollapse.classList.remove("show");
+        const toggler = document.querySelector(
+          '.navbar-toggler[data-bs-target="#navbarNav"]',
+        );
+        if (toggler) toggler.setAttribute("aria-expanded", "false");
+      };
+
+      const initialNav =
+        getLinkByHash(navLinks) ||
+        navLinks.find((link) => link.classList.contains("nav-pill")) ||
+        navLinks[0];
+      setActiveNav(initialNav);
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          setActiveNav(link);
+          closeMobileMenu();
+        });
       });
 
-      const hero = document.querySelector(".hero");
-      if (hero) {
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 32) {
-            hero.classList.add("hero-scroll");
-          } else {
-            hero.classList.remove("hero-scroll");
+      if (agencyButtons.length) {
+        const initialAgencyButton = agencyButtons.find((button) =>
+          button.classList.contains("agency-active"),
+        );
+
+        agencyButtons.forEach((button) => {
+          button.setAttribute("aria-pressed", "false");
+          button.addEventListener("click", () => {
+            setActiveAgency(button);
+          });
+        });
+
+        if (initialAgencyButton) {
+          setActiveAgency(initialAgencyButton);
+        }
+      }
+
+      const carouselRoot = document.querySelector(".services-carousel");
+      if (carouselRoot) {
+        const viewport = carouselRoot.querySelector(".carousel-viewport");
+        const track = carouselRoot.querySelector(".carousel-track");
+        const prevButton = carouselRoot.querySelector(
+          ".carousel-control-prev",
+        );
+        const nextButton = carouselRoot.querySelector(
+          ".carousel-control-next",
+        );
+        const originalCards = Array.from(track.children).map((card) =>
+          card.cloneNode(true),
+        );
+        const autoDelay = 4000;
+        let cardsPerView = 5;
+        let currentIndex = 0;
+        let autoTimer = null;
+
+        const getCardsPerView = () =>
+          Number.parseInt(
+            getComputedStyle(carouselRoot).getPropertyValue(
+              "--cards-per-view",
+            ),
+            10,
+          ) || 5;
+
+        const getStepSize = () => {
+          const firstCard = track.children[0];
+          if (!firstCard) return 0;
+          const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+          return firstCard.getBoundingClientRect().width + gap;
+        };
+
+        const setTrackPosition = (animate = true) => {
+          const step = getStepSize();
+          track.style.transition = animate ? "transform 0.55s ease" : "none";
+          track.style.transform = `translateX(-${step * currentIndex}px)`;
+        };
+
+        const buildLoop = () => {
+          cardsPerView = getCardsPerView();
+          track.innerHTML = "";
+
+          const headClones = originalCards
+            .slice(-cardsPerView)
+            .map((card) => card.cloneNode(true));
+          const tailClones = originalCards
+            .slice(0, cardsPerView)
+            .map((card) => card.cloneNode(true));
+          [
+            ...headClones,
+            ...originalCards.map((card) => card.cloneNode(true)),
+            ...tailClones,
+          ].forEach((card) => {
+            track.appendChild(card);
+          });
+
+          currentIndex = cardsPerView;
+          setTrackPosition(false);
+        };
+
+        const moveNext = () => {
+          currentIndex += 1;
+          setTrackPosition(true);
+        };
+
+        const movePrev = () => {
+          currentIndex -= 1;
+          setTrackPosition(true);
+        };
+
+        const startAuto = () => {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = setInterval(moveNext, autoDelay);
+        };
+
+        const restartAuto = () => {
+          startAuto();
+        };
+
+        track.addEventListener("transitionend", () => {
+          const totalOriginal = originalCards.length;
+          if (currentIndex >= totalOriginal + cardsPerView) {
+            currentIndex = cardsPerView;
+            setTrackPosition(false);
+          }
+          if (currentIndex < cardsPerView) {
+            currentIndex = totalOriginal + cardsPerView - 1;
+            setTrackPosition(false);
           }
         });
+
+        nextButton?.addEventListener("click", () => {
+          moveNext();
+          restartAuto();
+        });
+
+        prevButton?.addEventListener("click", () => {
+          movePrev();
+          restartAuto();
+        });
+
+        let resizeTimer = null;
+        window.addEventListener("resize", () => {
+          if (resizeTimer) clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            buildLoop();
+          }, 120);
+        });
+
+        buildLoop();
+        startAuto();
       }
-    </script>
-  </body>
+
+      const projectsRoot = document.querySelector(".projects-showcase");
+      if (projectsRoot) {
+        const frame = projectsRoot.querySelector(".projects-frame");
+        const track = projectsRoot.querySelector("#projectsTrack");
+        const prevButton = projectsRoot.querySelector(".projects-prev");
+        const nextButton = projectsRoot.querySelector(".projects-next");
+        const sourceCards = Array.from(track?.children || []).map((card) => {
+          const clone = card.cloneNode(true);
+          clone.removeAttribute("id");
+          return clone;
+        });
+        const sourceCardTargets = sourceCards.map(
+          (card) =>
+            card.dataset.cardTarget ||
+            card
+              .querySelector(".project-card-title")
+              ?.textContent?.trim()
+              .toLowerCase()
+              .replace(/[^a-z0-9]+/g, "-"),
+        );
+        const autoDelay = 5000;
+        const transitionDuration = 800;
+        let visibleCards = 5;
+        let currentIndex = 0;
+        let autoTimer = null;
+        let resizeTimer = null;
+        let isAnimating = false;
+        let expandAfterMove = false;
+
+        const isMobileProjectsView = () =>
+          window.matchMedia("(max-width: 991.98px)").matches;
+
+        const getVisibleCards = () => {
+          if (window.innerWidth <= 991) return 3;
+          return 5;
+        };
+
+        const getCardSizeMultiplier = () => {
+          if (window.innerWidth <= 991) return 1;
+          return 1.45;
+        };
+
+        const getStepSize = () => {
+          const firstCard = track?.children[0];
+          if (!firstCard) return 0;
+          const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+          return firstCard.offsetWidth + gap;
+        };
+
+        const applyCardSizes = () => {
+          if (!track || !frame) return;
+          const frameStyles = getComputedStyle(frame);
+          const framePaddingLeft =
+            Number.parseFloat(frameStyles.paddingLeft) || 0;
+          const framePaddingRight =
+            Number.parseFloat(frameStyles.paddingRight) || 0;
+          const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+          const frameWidth = frame.getBoundingClientRect().width;
+          const contentWidth =
+            frameWidth - framePaddingLeft - framePaddingRight;
+          const baseCardWidth =
+            (contentWidth - gap * (visibleCards - 1)) / visibleCards;
+          const cardWidth = baseCardWidth * getCardSizeMultiplier();
+
+          Array.from(track.children).forEach((card) => {
+            card.style.flexBasis = `${Math.max(cardWidth, 120)}px`;
+          });
+        };
+
+        const updateCenterCard = () => {
+          if (!track) return;
+          const cards = Array.from(track.children);
+          cards.forEach((card) => {
+            card.classList.remove("is-center", "is-expanded");
+          });
+          const centerIndex = currentIndex + Math.floor(visibleCards / 2);
+          const centerCard = cards[centerIndex];
+          if (centerCard) {
+            centerCard.classList.add("is-center");
+            if (isMobileProjectsView()) {
+              centerCard.classList.add("is-expanded");
+            }
+          }
+        };
+
+        const setTrackPosition = (animate = true) => {
+          if (!track) return;
+          const firstCard = track.children[0];
+          if (!firstCard) return;
+          const gap = Number.parseFloat(getComputedStyle(track).gap) || 0;
+          const cardWidth = firstCard.offsetWidth;
+          const step = cardWidth + gap;
+          const frameRect = frame?.getBoundingClientRect();
+          const frameStyles = frame ? getComputedStyle(frame) : null;
+          const framePaddingLeft = frameStyles
+            ? Number.parseFloat(frameStyles.paddingLeft) || 0
+            : 0;
+          const centerIndex = currentIndex + Math.floor(visibleCards / 2);
+          const sectionRect = projectsRoot.getBoundingClientRect();
+          const sectionCenterX = sectionRect.left + sectionRect.width / 2;
+          const trackStartX = (frameRect?.left || 0) + framePaddingLeft;
+          const centeredX =
+            sectionCenterX -
+            (trackStartX + centerIndex * step + cardWidth / 2);
+
+          track.style.transition = animate
+            ? `transform ${transitionDuration}ms cubic-bezier(0.22, 0.61, 0.36, 1)`
+            : "none";
+          track.style.transform = `translate3d(${centeredX}px, 0, 0)`;
+          updateCenterCard();
+        };
+
+        const buildLoop = () => {
+          if (!track || !sourceCards.length) return;
+          visibleCards = getVisibleCards();
+          track.innerHTML = "";
+
+          const headClones = sourceCards
+            .slice(-visibleCards)
+            .map((card) => card.cloneNode(true));
+          const tailClones = sourceCards
+            .slice(0, visibleCards)
+            .map((card) => card.cloneNode(true));
+
+          [...headClones, ...sourceCards, ...tailClones].forEach((card) => {
+            track.appendChild(card);
+          });
+
+          applyCardSizes();
+
+          currentIndex = visibleCards;
+          setTrackPosition(false);
+        };
+
+        const centerProjectCard = (target) => {
+          if (!track) return;
+          const targetIndex = sourceCardTargets.findIndex(
+            (item) => item === target,
+          );
+          if (targetIndex === -1) return;
+
+          stopAuto();
+          isAnimating = false;
+          expandAfterMove = false;
+          visibleCards = getVisibleCards();
+          const total = sourceCards.length;
+          const centerOffset = Math.floor(visibleCards / 2);
+          const originalTrackIndex = visibleCards + targetIndex;
+          currentIndex = originalTrackIndex - centerOffset;
+
+          const minIndex = visibleCards - centerOffset;
+          const maxIndex = visibleCards + total - 1 - centerOffset;
+          currentIndex = Math.max(minIndex, Math.min(maxIndex, currentIndex));
+
+          setTrackPosition(false);
+          restartAuto();
+        };
+
+        const moveNext = () => {
+          if (!track || isAnimating) return;
+          isAnimating = true;
+          currentIndex += 1;
+          setTrackPosition(true);
+        };
+
+        const movePrev = () => {
+          if (!track || isAnimating) return;
+          isAnimating = true;
+          currentIndex -= 1;
+          setTrackPosition(true);
+        };
+
+        const startAuto = () => {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = setInterval(() => {
+            moveNext();
+          }, autoDelay);
+        };
+
+        const stopAuto = () => {
+          if (!autoTimer) return;
+          clearInterval(autoTimer);
+          autoTimer = null;
+        };
+
+        const restartAuto = () => {
+          stopAuto();
+          startAuto();
+        };
+
+        track?.addEventListener("transitionend", () => {
+          const total = sourceCards.length;
+
+          if (currentIndex >= total + visibleCards) {
+            currentIndex = visibleCards;
+            setTrackPosition(false);
+          }
+
+          if (currentIndex < visibleCards) {
+            currentIndex = total + visibleCards - 1;
+            setTrackPosition(false);
+          }
+
+          isAnimating = false;
+          updateCenterCard();
+
+          if (expandAfterMove) {
+            const centeredCard = track.querySelector(
+              ".project-card.is-center",
+            );
+            centeredCard?.classList.add("is-expanded");
+            expandAfterMove = false;
+          }
+        });
+
+        nextButton?.addEventListener("click", () => {
+          moveNext();
+          restartAuto();
+        });
+
+        prevButton?.addEventListener("click", () => {
+          movePrev();
+          restartAuto();
+        });
+
+        track?.addEventListener("click", (event) => {
+          if (!isMobileProjectsView()) return;
+
+          const clickedCard = event.target.closest(".project-card");
+          if (!clickedCard || !track.contains(clickedCard)) return;
+
+          event.preventDefault();
+          const centerCard = track.querySelector(".project-card.is-center");
+          if (!centerCard) return;
+
+          if (clickedCard === centerCard) {
+            centerCard.classList.add("is-expanded");
+            stopAuto();
+            return;
+          }
+
+          const cards = Array.from(track.children);
+          const clickedIndex = cards.indexOf(clickedCard);
+          if (clickedIndex === -1) return;
+
+          const centerOffset = Math.floor(visibleCards / 2);
+          currentIndex = clickedIndex - centerOffset;
+          expandAfterMove = true;
+          isAnimating = true;
+          setTrackPosition(true);
+          stopAuto();
+        });
+
+        frame?.addEventListener("mouseenter", stopAuto);
+        frame?.addEventListener("mouseleave", startAuto);
+
+        window.addEventListener("resize", () => {
+          if (resizeTimer) clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(() => {
+            isAnimating = false;
+            buildLoop();
+          }, 120);
+        });
+
+        buildLoop();
+        startAuto();
+
+        document
+          .querySelectorAll(".agency-link[data-target]")
+          .forEach((link) => {
+            link.addEventListener("click", (event) => {
+              event.preventDefault();
+              const target = link.dataset.target;
+              centerProjectCard(target);
+
+              // Auto scroll ke target href (projects-showcase)
+              const sectionTarget = document.querySelector(link.getAttribute("href"));
+              if (sectionTarget) {
+                sectionTarget.scrollIntoView({ behavior: "smooth" });
+              }
+            });
+          });
+      }
+
+      const heroSection = document.querySelector(".hero");
+      if (heroSection) {
+        const heroLines = Array.from(
+          heroSection.querySelectorAll(".hero-line"),
+        );
+
+
+        const heroRevealObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                heroSection.classList.add("is-visible");
+              }
+            });
+          },
+          {
+            threshold: 0.25,
+          },
+        );
+
+        heroRevealObserver.observe(heroSection);
+
+
+
+      }
+
+      const aboutRevealSection = document.querySelector(
+        "#about.about-section",
+      );
+      if (aboutRevealSection) {
+        const revealAboutOnScroll = () => {
+          if (aboutRevealSection.classList.contains("about-is-visible"))
+            return;
+          const rect = aboutRevealSection.getBoundingClientRect();
+          const triggerLine = window.innerHeight * 0.82;
+          if (rect.top <= triggerLine) {
+            aboutRevealSection.classList.add("about-is-visible");
+            window.removeEventListener("scroll", revealAboutOnScroll);
+          }
+        };
+
+        window.addEventListener("scroll", revealAboutOnScroll, {
+          passive: true,
+        });
+        revealAboutOnScroll();
+
+        // Scroll-based parallax: X fly-in dari luar layar saat section masuk viewport
+        const aboutBgItems = Array.from(
+          aboutRevealSection.querySelectorAll(".about-bg__item[data-about-dir]")
+        );
+        let aboutScrollRafId = null;
+
+        const applyAboutScrollParallax = () => {
+          aboutScrollRafId = null;
+          if (!aboutBgItems.length) return;
+
+          const rect = aboutRevealSection.getBoundingClientRect();
+          const vh = window.innerHeight;
+
+          // progress: 0 = section belum masuk viewport (dari bawah)
+          //           1 = section top sudah mencapai viewport top
+          const progress = Math.max(0, Math.min(1, (vh - rect.top) / vh));
+
+          aboutBgItems.forEach((item) => {
+            const dir = parseFloat(item.dataset.aboutDir) || 1;
+            // Semakin section masuk viewport, semakin menyebar ke luar
+            // left (dir=-1): bergerak ke kiri → translateX negatif
+            // right (dir=1): bergerak ke kanan → translateX positif
+            const moveX = 200 * progress * dir;
+            item.style.transform = `translateY(-50%) translateX(${moveX.toFixed(2)}px)`;
+          });
+        };
+
+        const scheduleAboutScrollParallax = () => {
+          if (aboutScrollRafId === null) {
+            aboutScrollRafId = window.requestAnimationFrame(applyAboutScrollParallax);
+          }
+        };
+
+        window.addEventListener("scroll", scheduleAboutScrollParallax, { passive: true });
+
+        // Jalankan sekali saat load juga
+        applyAboutScrollParallax();
+      }
+
+      window.addEventListener("resize", scheduleServicesParallax);
+      scheduleServicesParallax();
+
+      window.addEventListener("hashchange", () => {
+        const navByHash = getLinkByHash(navLinks);
+        if (navByHash) setActiveNav(navByHash);
+      });
+
+      window.addEventListener("scroll", syncActiveByScroll, {
+        passive: true,
+      });
+      syncActiveByScroll();
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const scrollObserverOptions = {
+      threshold: 0.18,
+      rootMargin: "0px 0px -80px 0px",
+    };
+
+    const scrollSectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("scroll-visible");
+          scrollSectionObserver.unobserve(entry.target);
+        }
+      });
+    }, scrollObserverOptions);
+
+    document.querySelectorAll(".scroll-section").forEach((section) => {
+      scrollSectionObserver.observe(section);
+    });
+
+    const hero = document.querySelector(".hero");
+    const parallaxLayers = Array.from(
+      document.querySelectorAll("[data-parallax-speed]")
+    );
+
+    let lastScrollY = window.scrollY;
+    let rafId = null;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    const applyParallax = () => {
+      rafId = null;
+      const scrollY = window.scrollY;
+
+      // Toggle hero-scroll class
+      if (hero) {
+        hero.classList.toggle("hero-scroll", scrollY > 32);
+      }
+
+      // Scroll parallax untuk setiap layer
+      if (!reduceMotion && parallaxLayers.length) {
+        parallaxLayers.forEach((layer) => {
+          const speed = parseFloat(layer.dataset.parallaxSpeed) || 0.04;
+          // Elemen bergerak ke atas lebih lambat dari scroll → efek parallax
+          const offset = scrollY * speed * -1;
+          layer.style.transform = `translate3d(0, ${offset}px, 0)`;
+        });
+      }
+    };
+
+    const onScroll = () => {
+      if (rafId === null) {
+        rafId = window.requestAnimationFrame(applyParallax);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Jalankan sekali saat load
+    applyParallax();
+  </script>
+
+  <!-- Parallax Body Background + Mobile Bg2 Alignment (Unified) -->
+  <script>
+    (function () {
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var SPEED = 0.30;
+      var MOBILE_BREAKPOINT = 768;
+      var renderedHeight = 0; // tinggi render modify3.png di mobile
+      var ticking = false;
+
+      // Hitung tinggi render modify3.png di layar mobile
+      function calcRenderedHeight(callback) {
+        if (window.innerWidth >= MOBILE_BREAKPOINT) {
+          renderedHeight = 0;
+          if (callback) callback();
+          return;
+        }
+        var img = new Image();
+        img.onload = function () {
+          renderedHeight = Math.round(window.innerWidth * (img.naturalHeight / img.naturalWidth));
+          if (callback) callback();
+        };
+        img.src = "images/bg/modfy3.png";
+      }
+
+      function updateBgParallax() {
+        ticking = false;
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (reduceMotion) return;
+
+        var offset = scrollY * SPEED;
+
+        if (window.innerWidth < MOBILE_BREAKPOINT && renderedHeight > 0) {
+          // Mobile: 2 layer — posisi layer 2 mengikuti parallax + offset dari akhir layer 1
+          document.body.style.backgroundPositionY =
+            offset + "px, " + (renderedHeight + offset) + "px";
+        } else {
+          // Desktop: 1 layer biasa
+          document.body.style.backgroundPositionY = offset + "px";
+        }
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateBgParallax);
+        }
+      }
+
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      window.addEventListener("resize", function () {
+        calcRenderedHeight(updateBgParallax);
+      });
+
+      // Init: hitung dulu, baru jalankan parallax
+      calcRenderedHeight(updateBgParallax);
+    })();
+  </script>
+</body>
+
 </html>
